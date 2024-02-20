@@ -529,19 +529,19 @@
 		4CEA1C822B8499C900B7BDF6 /* CyberSol Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4CEA1E8E2B84A27000B7BDF6 /* Views */,
-				4CEA1E542B84A23100B7BDF6 /* SwiftRichString */,
-				4CEA1D9C2B84A1FA00B7BDF6 /* sprites.tlas */,
-				4CEA1D6B2B84A1CE00B7BDF6 /* Sounds */,
-				4CEA1D462B84A19A00B7BDF6 /* SKTUtils */,
-				4CEA1D302B84A16B00B7BDF6 /* other Resources */,
-				4CEA1D0D2B84A12C00B7BDF6 /* Observable-Swift */,
-				4CEA1CFE2B84A0F000B7BDF6 /* Model */,
-				4CEA1CD32B84A08D00B7BDF6 /* images */,
-				4CEA1CC92B84A05700B7BDF6 /* Helper */,
-				4CEA1CBB2B849FE200B7BDF6 /* Controller */,
 				4CEA1CB72B849F3000B7BDF6 /* ActionLogger */,
 				4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */,
+				4CEA1CBB2B849FE200B7BDF6 /* Controller */,
+				4CEA1CC92B84A05700B7BDF6 /* Helper */,
+				4CEA1CD32B84A08D00B7BDF6 /* images */,
+				4CEA1CFE2B84A0F000B7BDF6 /* Model */,
+				4CEA1D0D2B84A12C00B7BDF6 /* Observable-Swift */,
+				4CEA1D302B84A16B00B7BDF6 /* other Resources */,
+				4CEA1D462B84A19A00B7BDF6 /* SKTUtils */,
+				4CEA1D6B2B84A1CE00B7BDF6 /* Sounds */,
+				4CEA1D9C2B84A1FA00B7BDF6 /* sprites.tlas */,
+				4CEA1E542B84A23100B7BDF6 /* SwiftRichString */,
+				4CEA1E8E2B84A27000B7BDF6 /* Views */,
 			);
 			path = "CyberSol Shared";
 			sourceTree = "<group>";

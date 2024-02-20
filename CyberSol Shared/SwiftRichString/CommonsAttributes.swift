@@ -43,11 +43,22 @@ import CoreGraphics
 	public typealias SymbolicTraits = NSFontDescriptor.SymbolicTraits
 	public typealias LineBreak = NSLineBreakMode
 
-	let FontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
-	let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
-	let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
+    let FontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
+    // 'typeIdentifier' was deprecated in iOS 15.0
+    //let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.featureIdentifier
+    let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.type
+    // 'typeIdentifier' was deprecated in iOS 15.0
+    //let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
+    let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selector
+	
 
-#else
+    //  let FontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
+    //	let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
+    //	let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
+
+#endif
+
+#if os(iOS)
 	import UIKit
 
 	public typealias Color = UIColor
@@ -58,8 +69,12 @@ import CoreGraphics
 	public typealias LineBreak = NSLineBreakMode
 
 	let FontDescriptorFeatureSettingsAttribute = UIFontDescriptor.AttributeName.featureSettings
-	let FontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
-	let FontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.typeIdentifier
+	// 'typeIdentifier' was deprecated in iOS 15.0
+    //let FontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
+    let FontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.type
+    // 'typeIdentifier' was deprecated in iOS 15.0
+	//let FontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.typeIdentifier
+    let FontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.selector
 
 #endif
 

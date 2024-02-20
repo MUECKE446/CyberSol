@@ -61,18 +61,27 @@ extension Color: ColorConvertible {
 	public convenience init(hexString: String) {
 		let hexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
 		let scanner   = Scanner(string: hexString)
-		
 		if hexString.hasPrefix("#") {
-			scanner.scanLocation = 1
+            //'scanLocation' was deprecated in iOS 13.0
+            //scanner.scanLocation     = 1
+            scanner.currentIndex = hexString.index(after: hexString.startIndex)
 		}
 		
-		var color: UInt32 = 0
+        //var color: UInt32 = 0
+		let color: UInt32 = 0
 		
-		if scanner.scanHexInt32(&color) {
-			self.init(hex: color, useAlpha: hexString.count > 7)
-		} else {
-			self.init(hex: 0x000000)
-		}
+        var newColor : UInt64 = UInt64(color)
+        //'scanHexInt32' was deprecated in iOS 13.0
+//		if scanner.scanHexInt32(&color) {
+//			self.init(hex: color, useAlpha: hexString.count > 7)
+//		} else {
+//			self.init(hex: 0x000000)
+//		}
+        if scanner.scanHexInt64(&newColor) {
+            self.init(hex: color, useAlpha: hexString.count > 7)
+        } else {
+            self.init(hex: 0x000000)
+        }
 	}
 	
 	/// Initialize a new color from HEX string as UInt32 with optional alpha chanell.
