@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
+#if os(OSX)
+import Cocoa
+#endif
 
 
 let log = ActionLogger.defaultLogger()
@@ -26,6 +31,7 @@ func logSwiftyPlistManager(_ error: SwiftyPlistManagerError?) {
     print("-------------> SwiftyPlistManager error: '\(err)'")
 }
 
+#if os(iOS)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -131,3 +137,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 }
+#endif
+
+#if os(OSX)
+
+@main
+class AppDelegate: NSObject, NSApplicationDelegate {
+
+
+
+    func applicationDidFinishLaunching(_ aNotification: Notification){
+        // Insert code here to initialize your application
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+
+
+}
+
+
+
+#endif

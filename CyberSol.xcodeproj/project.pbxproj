@@ -11,10 +11,9 @@
 		4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E902B84A29900B7BDF6 /* UserInteractionProtocolDelegate.swift */; };
 		4C35F2C92B869563000762C3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E922B84A29900B7BDF6 /* GameScene.swift */; };
 		4C35F2D22B879A15000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D02B879A14000762C3 /* LaunchScreen.xib */; };
-		4C35F2DA2B87BAF7000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */; };
-		4CEA1C8F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */; };
+		4C35F2DF2B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
+		4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
 		4CEA1C942B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */; };
-		4CEA1C9F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */; };
 		4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */; };
 		4CEA1CA42B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */; };
 		4CEA1CAC2B8499CB00B7BDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */; };
@@ -327,13 +326,11 @@
 
 /* Begin PBXFileReference section */
 		4C35F2D12B879A14000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4C35F2D92B87BAF7000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4C35F2DE2B87E674000762C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CEA1C8B2B8499CB00B7BDF6 /* CyberSol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSol.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEA1C932B8499CB00B7BDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CEA1C9C2B8499CB00B7BDF6 /* CyberSol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSol.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4CEA1CA32B8499CB00B7BDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CEA1CB82B849F8000B7BDF6 /* ActionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionLogger.swift; path = ActionLogger/ActionLogger.swift; sourceTree = "<group>"; };
@@ -531,6 +528,7 @@
 		4CEA1C822B8499C900B7BDF6 /* CyberSol Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4C35F2DE2B87E674000762C3 /* AppDelegate.swift */,
 				4CEA1CB72B849F3000B7BDF6 /* ActionLogger */,
 				4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */,
 				4CEA1CBB2B849FE200B7BDF6 /* Controller */,
@@ -560,7 +558,6 @@
 		4CEA1C8D2B8499CB00B7BDF6 /* CyberSol iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */,
 				4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */,
 				4C35F2D02B879A14000762C3 /* LaunchScreen.xib */,
 			);
@@ -570,8 +567,6 @@
 		4CEA1C9D2B8499CB00B7BDF6 /* CyberSol macOS */ = {
 			isa = PBXGroup;
 			children = (
-				4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */,
-				4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */,
 				4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */,
 				4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */,
 			);
@@ -1103,7 +1098,6 @@
 				4CEA1E2B2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E132B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
 				4CEA1CE52B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */,
-				4C35F2DA2B87BAF7000762C3 /* LaunchScreen.xib in Resources */,
 				4CEA1DF72B84A21E00B7BDF6 /* Card48.png in Resources */,
 				4CEA1E1D2B84A21E00B7BDF6 /* PileEmpty-2.png in Resources */,
 				4CEA1D932B84A1E700B7BDF6 /* shuffle.caf in Resources */,
@@ -1162,6 +1156,7 @@
 				4CEA1E7C2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */,
 				4CEA1CCD2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
 				4CEA1CC72B84A00B00B7BDF6 /* SettingsTableViewController.swift in Sources */,
+				4C35F2DF2B87E674000762C3 /* AppDelegate.swift in Sources */,
 				4CEA1E722B84A25600B7BDF6 /* StylesManager.swift in Sources */,
 				4CEA1D1C2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */,
 				4CEA1E782B84A25600B7BDF6 /* AssociatedValues.swift in Sources */,
@@ -1172,7 +1167,6 @@
 				4CEA1D242B84A14C00B7BDF6 /* EventSubscription.swift in Sources */,
 				4CEA1D072B84A11400B7BDF6 /* GameLayout.swift in Sources */,
 				4CEA1D532B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
-				4CEA1C8F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */,
 				4CEA1D062B84A11400B7BDF6 /* PileLayout.swift in Sources */,
 				4CEA1E8A2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */,
 				4CEA1D282B84A14C00B7BDF6 /* ObservableChainingProxy.swift in Sources */,
@@ -1195,7 +1189,6 @@
 			files = (
 				4CEA1D1B2B84A14C00B7BDF6 /* EventReference.swift in Sources */,
 				4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */,
-				4CEA1C9F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */,
 				4CEA1D5C2B84A1BB00B7BDF6 /* CGVector+Extensions.swift in Sources */,
 				4CEA1E692B84A25600B7BDF6 /* CommonsAttributes.swift in Sources */,
 				4CEA1E752B84A25600B7BDF6 /* String+Subscript.swift in Sources */,
@@ -1232,6 +1225,7 @@
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
 				4CEA1D212B84A14C00B7BDF6 /* ObservableReference.swift in Sources */,
 				4CEA1E8B2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */,
+				4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */,
 				4CEA1E7D2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */,
 				4CEA1D6A2B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D682B84A1BB00B7BDF6 /* SKAction+Extensions.swift in Sources */,
@@ -1253,14 +1247,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C35F2D12B879A14000762C3 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C35F2D92B87BAF7000762C3 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
