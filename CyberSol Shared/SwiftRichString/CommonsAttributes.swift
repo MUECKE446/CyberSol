@@ -44,17 +44,8 @@ import CoreGraphics
 	public typealias LineBreak = NSLineBreakMode
 
     let FontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
-    // 'typeIdentifier' was deprecated in iOS 15.0
-    //let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.featureIdentifier
-    let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.type
-    // 'typeIdentifier' was deprecated in iOS 15.0
-    //let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
-    let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selector
-	
-
-    //  let FontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
-    //	let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
-    //	let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
+    let FontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
+    let FontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
 
 #endif
 

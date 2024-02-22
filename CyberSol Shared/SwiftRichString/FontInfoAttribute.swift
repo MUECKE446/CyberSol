@@ -35,7 +35,14 @@ import Foundation
 // This is not supported on watchOS
 #if os(iOS) || os(tvOS) || os(OSX)
 
+#if os(iOS)
 import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 import CoreText
 
 /// Protocol to provide values to be used by `UIFontFeatureTypeIdentifierKey`

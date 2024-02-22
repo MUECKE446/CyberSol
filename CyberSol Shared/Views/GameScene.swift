@@ -6,8 +6,16 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
+
+#if os(iOS)
+import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 
 var playableRect = CGRect.zero
@@ -19,8 +27,17 @@ class GameScene: SKScene {
 
     weak var sceneDelegate: TouchesProtocolDelegate? = nil
     
+    #if os(iOS)
     var cardNodes: [CardNode]? = []
     var pileEmptyNodes: [PileEmptyNode]? = []
+    #endif
+    
+    #if os(OSX)
+    var cardNodes: [CardNode]? = []
+    var pileEmptyNodes: [PileEmptyNode]? = []
+    #endif
+
+
     
     deinit {
         log.verbose("GameScene deinit")
@@ -47,11 +64,12 @@ class GameScene: SKScene {
         //log.verbose("scene moved")
     }
     
-//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-//        let a=1
-//        //log.info("touch on: \(locationInScene)")
-//
-//    }
+    override func update(_ currentTime: TimeInterval) {
+         /* Called before each frame is rendered */
+     }
+  
+    #if os(iOS)
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch = touches.first! as UITouch
         let location = touch.location(in: self)
@@ -79,9 +97,13 @@ class GameScene: SKScene {
         let _ = locationInScene
         //log.info("touch on: \(locationInScene)")
     }
+ 
+    #endif
     
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
-    }
+    #if os(OSX)
+
+
+    #endif
     
+ 
 }

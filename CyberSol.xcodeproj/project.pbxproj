@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E912B84A29900B7BDF6 /* TouchesProtocolDelegate.swift */; };
+		4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E902B84A29900B7BDF6 /* UserInteractionProtocolDelegate.swift */; };
+		4C35F2C92B869563000762C3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E922B84A29900B7BDF6 /* GameScene.swift */; };
+		4C35F2D22B879A15000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D02B879A14000762C3 /* LaunchScreen.xib */; };
+		4C35F2DA2B87BAF7000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */; };
 		4CEA1C8F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */; };
 		4CEA1C942B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */; };
 		4CEA1C9F2B8499CB00B7BDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */; };
 		4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */; };
 		4CEA1CA42B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */; };
-		4CEA1CA62B8499CB00B7BDF6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C832B8499C900B7BDF6 /* Actions.sks */; };
-		4CEA1CA72B8499CB00B7BDF6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C832B8499C900B7BDF6 /* Actions.sks */; };
 		4CEA1CAC2B8499CB00B7BDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */; };
 		4CEA1CAD2B8499CB00B7BDF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */; };
 		4CEA1CB92B849F8000B7BDF6 /* ActionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CB82B849F8000B7BDF6 /* ActionLogger.swift */; };
@@ -323,7 +326,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4CEA1C832B8499C900B7BDF6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		4C35F2D12B879A14000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4C35F2D92B87BAF7000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CEA1C8B2B8499CB00B7BDF6 /* CyberSol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -332,8 +336,6 @@
 		4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4CEA1CA32B8499CB00B7BDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4CEA1CA52B8499CB00B7BDF6 /* CyberSol_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CyberSol_macOS.entitlements; sourceTree = "<group>"; };
-		4CEA1CB62B849E8C00B7BDF6 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4CEA1CB82B849F8000B7BDF6 /* ActionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionLogger.swift; path = ActionLogger/ActionLogger.swift; sourceTree = "<group>"; };
 		4CEA1CBC2B84A00B00B7BDF6 /* SelectGameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectGameTableViewController.swift; path = Controller/SelectGameTableViewController.swift; sourceTree = "<group>"; };
 		4CEA1CBD2B84A00B00B7BDF6 /* StatisticTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticTableViewController.swift; path = Controller/StatisticTableViewController.swift; sourceTree = "<group>"; };
@@ -560,7 +562,7 @@
 			children = (
 				4CEA1C8E2B8499CB00B7BDF6 /* AppDelegate.swift */,
 				4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */,
-				4CEA1CB62B849E8C00B7BDF6 /* LaunchScreen.xib */,
+				4C35F2D02B879A14000762C3 /* LaunchScreen.xib */,
 			);
 			path = "CyberSol iOS";
 			sourceTree = "<group>";
@@ -568,11 +570,10 @@
 		4CEA1C9D2B8499CB00B7BDF6 /* CyberSol macOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */,
 				4CEA1C9E2B8499CB00B7BDF6 /* AppDelegate.swift */,
 				4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */,
 				4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */,
-				4CEA1CA52B8499CB00B7BDF6 /* CyberSol_macOS.entitlements */,
-				4CEA1C832B8499C900B7BDF6 /* Actions.sks */,
 			);
 			path = "CyberSol macOS";
 			sourceTree = "<group>";
@@ -982,7 +983,6 @@
 				4CEA1E202B84A21E00B7BDF6 /* Card35.png in Resources */,
 				4CEA1E502B84A21E00B7BDF6 /* Card39.png in Resources */,
 				4CEA1E522B84A21E00B7BDF6 /* Card36.png in Resources */,
-				4CEA1CA62B8499CB00B7BDF6 /* Actions.sks in Resources */,
 				4CEA1CFA2B84A0B300B7BDF6 /* icon-redo-48.png in Resources */,
 				4CEA1E462B84A21E00B7BDF6 /* Card7.png in Resources */,
 				4CEA1DEA2B84A21E00B7BDF6 /* Card6.png in Resources */,
@@ -990,6 +990,7 @@
 				4CEA1CFC2B84A0B300B7BDF6 /* icon-undo-48.png in Resources */,
 				4CEA1D942B84A1E700B7BDF6 /* weird.caf in Resources */,
 				4CEA1D822B84A1E700B7BDF6 /* incorrect.caf in Resources */,
+				4C35F2D22B879A15000762C3 /* LaunchScreen.xib in Resources */,
 				4CEA1E0C2B84A21E00B7BDF6 /* Card34.png in Resources */,
 				4CEA1E2A2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E122B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
@@ -1102,9 +1103,9 @@
 				4CEA1E2B2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E132B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
 				4CEA1CE52B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */,
+				4C35F2DA2B87BAF7000762C3 /* LaunchScreen.xib in Resources */,
 				4CEA1DF72B84A21E00B7BDF6 /* Card48.png in Resources */,
 				4CEA1E1D2B84A21E00B7BDF6 /* PileEmpty-2.png in Resources */,
-				4CEA1CA72B8499CB00B7BDF6 /* Actions.sks in Resources */,
 				4CEA1D932B84A1E700B7BDF6 /* shuffle.caf in Resources */,
 				4CEA1D8D2B84A1E700B7BDF6 /* gun.caf in Resources */,
 				4CEA1E312B84A21E00B7BDF6 /* Card47.png in Resources */,
@@ -1202,6 +1203,7 @@
 				4CEA1E7B2B84A25600B7BDF6 /* FontConvertible.swift in Sources */,
 				4CEA1D232B84A14C00B7BDF6 /* Observable.swift in Sources */,
 				4CEA1E6B2B84A25600B7BDF6 /* String+Ext.swift in Sources */,
+				4C35F2C92B869563000762C3 /* GameScene.swift in Sources */,
 				4CEA1D1F2B84A14C00B7BDF6 /* Event.swift in Sources */,
 				4CEA1E6F2B84A25600B7BDF6 /* Style.swift in Sources */,
 				4CEA1D582B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
@@ -1211,6 +1213,7 @@
 				4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
 				4CEA1E772B84A25600B7BDF6 /* UIKit+Extras.swift in Sources */,
 				4CEA1CCE2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
+				4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */,
 				4CEA1CC82B84A01D00B7BDF6 /* ActionLogger.swift in Sources */,
 				4CEA1E892B84A25600B7BDF6 /* OrderedDictionary.swift in Sources */,
 				4CEA1D2D2B84A14C00B7BDF6 /* ObservableProxy.swift in Sources */,
@@ -1224,6 +1227,7 @@
 				4CEA1D5A2B84A1BB00B7BDF6 /* SKNode+Extensions.swift in Sources */,
 				4CEA1D1D2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */,
 				4CEA1D662B84A1BB00B7BDF6 /* SKAction+SpecialEffects.swift in Sources */,
+				4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */,
 				4CEA1E6D2B84A25600B7BDF6 /* StyleRegEx.swift in Sources */,
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
 				4CEA1D212B84A14C00B7BDF6 /* ObservableReference.swift in Sources */,
@@ -1245,6 +1249,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4C35F2D02B879A14000762C3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C35F2D12B879A14000762C3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		4C35F2D82B87BAF7000762C3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C35F2D92B87BAF7000762C3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1297,6 +1317,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1316,6 +1337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1358,6 +1380,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1371,6 +1394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1444,24 +1468,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y8C3Y98A86;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muecke.CyberSol;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Muecke-Software.CyberSol";
 				PRODUCT_NAME = CyberSol;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1473,24 +1501,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol_macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y8C3Y98A86;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.muecke.CyberSol;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Muecke-Software.CyberSol";
 				PRODUCT_NAME = CyberSol;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
