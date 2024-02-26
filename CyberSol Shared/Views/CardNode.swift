@@ -6,8 +6,15 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
+
+#if os(iOS)
+import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
 
 // MARK: Konstanten
 let cAdditionalTime = 0.1
@@ -261,6 +268,7 @@ class CardNode: SKSpriteNode {
     }
     
     // MARK: touches
+    #if os(iOS)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch = touches.first! as UITouch
@@ -305,5 +313,17 @@ class CardNode: SKSpriteNode {
 //            break
 //        }
     }
+    
+    #endif
+
+    
+    // TODO:    Behandlung Mouse für OSX hinzufügen
+    
+    #if os(OSX)
+    
+    
+    #endif
+    
+
 
 }

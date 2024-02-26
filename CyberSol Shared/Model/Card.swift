@@ -6,7 +6,15 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
+
+#if os(iOS)
 import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 enum SuitType: Int {
     case

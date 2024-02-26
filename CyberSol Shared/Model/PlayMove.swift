@@ -6,8 +6,16 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
+
+#if os(iOS)
+import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 enum PlayMoveResult {
     case

@@ -6,8 +6,16 @@
 //  Copyright (c) 2015 Christian Muth. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
+
+#if os(iOS)
+import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 class PileEmptyNode: SKSpriteNode {
 
@@ -31,7 +39,14 @@ class PileEmptyNode: SKSpriteNode {
         pileEmptyImage += String(pileEmptyId) + ".png"
         frontTexture = SKTexture(imageNamed: pileEmptyImage)
         
+        #if os(iOS)
         super.init(texture: frontTexture, color: UIColor.clear, size: frontTexture!.size())
+        #endif
+        
+        #if os(OSX)
+        super.init(texture: frontTexture, color: NSColor.clear, size: frontTexture!.size())
+        #endif
+        
        
         isUserInteractionEnabled = true
         
@@ -40,6 +55,8 @@ class PileEmptyNode: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    #if os(iOS)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: AnyObject = touches.first!
@@ -73,7 +90,13 @@ class PileEmptyNode: SKSpriteNode {
 //        }
     }
     
+    #endif
     
-
-
+    // TODO:    Behandlung Mouse für OSX hinzufügen
+    
+    #if os(OSX)
+    
+    
+    #endif
+    
 }

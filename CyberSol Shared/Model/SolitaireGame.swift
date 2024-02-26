@@ -7,7 +7,15 @@
 //
 
 import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
@@ -137,7 +145,13 @@ let gameListName = "CyberSolitaireGames"
 
 class SolitaireGame: NSObject {
     
+    #if os(iOS)
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    #endif
+    
+    #if os(OSX)
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
+    #endif
 
     weak var userInteractionProtocolDelegate: UserInteractionProtocolDelegate?
 

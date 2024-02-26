@@ -7,7 +7,15 @@
 //
 
 import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 
 let defaultFaceUpOverlapPercent:CGFloat = 30.0;
 let defaultFaceDownOverlapPercent:CGFloat = 10.0;

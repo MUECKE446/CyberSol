@@ -13,6 +13,17 @@
 		4C35F2D22B879A15000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D02B879A14000762C3 /* LaunchScreen.xib */; };
 		4C35F2DF2B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
 		4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
+		4CD952AB2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
+		4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
+		4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
+		4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E932B84A29900B7BDF6 /* PileEmptyNode.swift */; };
+		4CD952AF2B8D40B900109005 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D022B84A11400B7BDF6 /* Card.swift */; };
+		4CD952B02B8D412700109005 /* GameLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D002B84A11400B7BDF6 /* GameLayout.swift */; };
+		4CD952B12B8D419400109005 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D032B84A11400B7BDF6 /* Pile.swift */; };
+		4CD952B22B8D41A200109005 /* PileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CFF2B84A11400B7BDF6 /* PileLayout.swift */; };
+		4CD952B32B8D41C100109005 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
+		4CD952B52B8D41EC00109005 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
+		4CD952B72B8D43C200109005 /* SolitaireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D012B84A11400B7BDF6 /* SolitaireGame.swift */; };
 		4CEA1C942B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */; };
 		4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */; };
 		4CEA1CA42B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */; };
@@ -34,8 +45,6 @@
 		4CEA1CD22B84A07600B7BDF6 /* SwiftyPlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CCC2B84A07600B7BDF6 /* SwiftyPlistManager.swift */; };
 		4CEA1CE22B84A0B300B7BDF6 /* icon-undo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD42B84A0B300B7BDF6 /* icon-undo-1.png */; };
 		4CEA1CE32B84A0B300B7BDF6 /* icon-undo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD42B84A0B300B7BDF6 /* icon-undo-1.png */; };
-		4CEA1CE42B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD52B84A0B300B7BDF6 /* BackgroundWildWest.pxm */; };
-		4CEA1CE52B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD52B84A0B300B7BDF6 /* BackgroundWildWest.pxm */; };
 		4CEA1CE62B84A0B300B7BDF6 /* icon-undo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD62B84A0B300B7BDF6 /* icon-undo.png */; };
 		4CEA1CE72B84A0B300B7BDF6 /* icon-undo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD62B84A0B300B7BDF6 /* icon-undo.png */; };
 		4CEA1CE82B84A0B300B7BDF6 /* CyberSol_Background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CD72B84A0B300B7BDF6 /* CyberSol_Background1.png */; };
@@ -327,6 +336,7 @@
 /* Begin PBXFileReference section */
 		4C35F2D12B879A14000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C35F2DE2B87E674000762C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */ = {isa = PBXFileReference; lastKnownFileType = text; path = "weiteres Vorgehen"; sourceTree = "<group>"; };
 		4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CEA1C8B2B8499CB00B7BDF6 /* CyberSol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberSol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEA1C932B8499CB00B7BDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -344,7 +354,6 @@
 		4CEA1CCB2B84A07600B7BDF6 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = Helper/Helper.swift; sourceTree = "<group>"; };
 		4CEA1CCC2B84A07600B7BDF6 /* SwiftyPlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyPlistManager.swift; path = Helper/SwiftyPlistManager.swift; sourceTree = "<group>"; };
 		4CEA1CD42B84A0B300B7BDF6 /* icon-undo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-undo-1.png"; path = "images/icon-undo-1.png"; sourceTree = "<group>"; };
-		4CEA1CD52B84A0B300B7BDF6 /* BackgroundWildWest.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; name = BackgroundWildWest.pxm; path = images/BackgroundWildWest.pxm; sourceTree = "<group>"; };
 		4CEA1CD62B84A0B300B7BDF6 /* icon-undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-undo.png"; path = "images/icon-undo.png"; sourceTree = "<group>"; };
 		4CEA1CD72B84A0B300B7BDF6 /* CyberSol_Background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CyberSol_Background1.png; path = images/CyberSol_Background1.png; sourceTree = "<group>"; };
 		4CEA1CD82B84A0B300B7BDF6 /* icon-redo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-redo-1.png"; path = "images/icon-redo-1.png"; sourceTree = "<group>"; };
@@ -531,6 +540,7 @@
 				4C35F2DE2B87E674000762C3 /* AppDelegate.swift */,
 				4CEA1CB72B849F3000B7BDF6 /* ActionLogger */,
 				4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */,
+				4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */,
 				4CEA1CBB2B849FE200B7BDF6 /* Controller */,
 				4CEA1CC92B84A05700B7BDF6 /* Helper */,
 				4CEA1CD32B84A08D00B7BDF6 /* images */,
@@ -539,7 +549,7 @@
 				4CEA1D302B84A16B00B7BDF6 /* other Resources */,
 				4CEA1D462B84A19A00B7BDF6 /* SKTUtils */,
 				4CEA1D6B2B84A1CE00B7BDF6 /* Sounds */,
-				4CEA1D9C2B84A1FA00B7BDF6 /* sprites.tlas */,
+				4CEA1D9C2B84A1FA00B7BDF6 /* sprites.atlas */,
 				4CEA1E542B84A23100B7BDF6 /* SwiftRichString */,
 				4CEA1E8E2B84A27000B7BDF6 /* Views */,
 			);
@@ -608,7 +618,6 @@
 			isa = PBXGroup;
 			children = (
 				4CEA1CDD2B84A0B300B7BDF6 /* BackgroundWildWest.png */,
-				4CEA1CD52B84A0B300B7BDF6 /* BackgroundWildWest.pxm */,
 				4CEA1CD72B84A0B300B7BDF6 /* CyberSol_Background1.png */,
 				4CEA1CDE2B84A0B300B7BDF6 /* cyberSolitaire-icon-1024.png */,
 				4CEA1CD82B84A0B300B7BDF6 /* icon-redo-1.png */,
@@ -713,7 +722,7 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
-		4CEA1D9C2B84A1FA00B7BDF6 /* sprites.tlas */ = {
+		4CEA1D9C2B84A1FA00B7BDF6 /* sprites.atlas */ = {
 			isa = PBXGroup;
 			children = (
 				4CEA1DBB2B84A21D00B7BDF6 /* Back1.png */,
@@ -778,7 +787,7 @@
 				4CEA1DCC2B84A21D00B7BDF6 /* PileEmpty-6.png */,
 				4CEA1DAC2B84A21C00B7BDF6 /* PileEmpty-7.png */,
 			);
-			name = sprites.tlas;
+			name = sprites.atlas;
 			sourceTree = "<group>";
 		};
 		4CEA1E542B84A23100B7BDF6 /* SwiftRichString */ = {
@@ -919,6 +928,7 @@
 				4CEA1DE22B84A21E00B7BDF6 /* Card37.png in Resources */,
 				4CEA1CF22B84A0B300B7BDF6 /* icon-settings.png in Resources */,
 				4CEA1E142B84A21E00B7BDF6 /* Card15.png in Resources */,
+				4CD952AB2B8D3A2F00109005 /* weiteres Vorgehen in Resources */,
 				4CEA1DDC2B84A21E00B7BDF6 /* Card2.png in Resources */,
 				4CEA1E442B84A21E00B7BDF6 /* Card46.png in Resources */,
 				4CEA1CEC2B84A0B300B7BDF6 /* icon-settings-1.png in Resources */,
@@ -989,7 +999,6 @@
 				4CEA1E0C2B84A21E00B7BDF6 /* Card34.png in Resources */,
 				4CEA1E2A2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E122B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
-				4CEA1CE42B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */,
 				4CEA1DF62B84A21E00B7BDF6 /* Card48.png in Resources */,
 				4CEA1E1C2B84A21E00B7BDF6 /* PileEmpty-2.png in Resources */,
 				4CEA1CAC2B8499CB00B7BDF6 /* Assets.xcassets in Resources */,
@@ -1013,6 +1022,7 @@
 				4CEA1E392B84A21E00B7BDF6 /* PileEmpty-6.png in Resources */,
 				4CEA1E4B2B84A21E00B7BDF6 /* Card28.png in Resources */,
 				4CEA1E112B84A21E00B7BDF6 /* Card19.png in Resources */,
+				4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */,
 				4CEA1E1B2B84A21E00B7BDF6 /* Card14.png in Resources */,
 				4CEA1D3F2B84A18900B7BDF6 /* game(Black Widow weich).plist in Resources */,
 				4CEA1CE32B84A0B300B7BDF6 /* icon-undo-1.png in Resources */,
@@ -1097,7 +1107,6 @@
 				4CEA1E0D2B84A21E00B7BDF6 /* Card34.png in Resources */,
 				4CEA1E2B2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E132B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
-				4CEA1CE52B84A0B300B7BDF6 /* BackgroundWildWest.pxm in Resources */,
 				4CEA1DF72B84A21E00B7BDF6 /* Card48.png in Resources */,
 				4CEA1E1D2B84A21E00B7BDF6 /* PileEmpty-2.png in Resources */,
 				4CEA1D932B84A1E700B7BDF6 /* shuffle.caf in Resources */,
@@ -1188,23 +1197,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEA1D1B2B84A14C00B7BDF6 /* EventReference.swift in Sources */,
+				4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */,
 				4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */,
 				4CEA1D5C2B84A1BB00B7BDF6 /* CGVector+Extensions.swift in Sources */,
 				4CEA1E692B84A25600B7BDF6 /* CommonsAttributes.swift in Sources */,
 				4CEA1E752B84A25600B7BDF6 /* String+Subscript.swift in Sources */,
 				4CEA1D642B84A1BB00B7BDF6 /* Int+Extensions.swift in Sources */,
+				4CD952B32B8D41C100109005 /* PlayMove.swift in Sources */,
 				4CEA1E7B2B84A25600B7BDF6 /* FontConvertible.swift in Sources */,
 				4CEA1D232B84A14C00B7BDF6 /* Observable.swift in Sources */,
+				4CD952B72B8D43C200109005 /* SolitaireGame.swift in Sources */,
 				4CEA1E6B2B84A25600B7BDF6 /* String+Ext.swift in Sources */,
 				4C35F2C92B869563000762C3 /* GameScene.swift in Sources */,
+				4CD952B22B8D41A200109005 /* PileLayout.swift in Sources */,
 				4CEA1D1F2B84A14C00B7BDF6 /* Event.swift in Sources */,
 				4CEA1E6F2B84A25600B7BDF6 /* Style.swift in Sources */,
+				4CD952B02B8D412700109005 /* GameLayout.swift in Sources */,
 				4CEA1D582B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
 				4CEA1D252B84A14C00B7BDF6 /* EventSubscription.swift in Sources */,
 				4CEA1E732B84A25600B7BDF6 /* StylesManager.swift in Sources */,
 				4CEA1E852B84A25600B7BDF6 /* Compatibility.swift in Sources */,
 				4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
 				4CEA1E772B84A25600B7BDF6 /* UIKit+Extras.swift in Sources */,
+				4CD952AF2B8D40B900109005 /* Card.swift in Sources */,
 				4CEA1CCE2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
 				4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */,
 				4CEA1CC82B84A01D00B7BDF6 /* ActionLogger.swift in Sources */,
@@ -1222,13 +1237,16 @@
 				4CEA1D662B84A1BB00B7BDF6 /* SKAction+SpecialEffects.swift in Sources */,
 				4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */,
 				4CEA1E6D2B84A25600B7BDF6 /* StyleRegEx.swift in Sources */,
+				4CD952B12B8D419400109005 /* Pile.swift in Sources */,
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
+				4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */,
 				4CEA1D212B84A14C00B7BDF6 /* ObservableReference.swift in Sources */,
 				4CEA1E8B2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */,
 				4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */,
 				4CEA1E7D2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */,
 				4CEA1D6A2B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D682B84A1BB00B7BDF6 /* SKAction+Extensions.swift in Sources */,
+				4CD952B52B8D41EC00109005 /* Statistics.swift in Sources */,
 				4CEA1E712B84A25600B7BDF6 /* FontInfoAttribute.swift in Sources */,
 				4CEA1E8D2B84A25600B7BDF6 /* StyleGroup.swift in Sources */,
 				4CEA1E872B84A25600B7BDF6 /* SystemFonts.swift in Sources */,
