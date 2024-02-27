@@ -24,6 +24,7 @@
 		4CD952B32B8D41C100109005 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
 		4CD952B52B8D41EC00109005 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
 		4CD952B72B8D43C200109005 /* SolitaireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D012B84A11400B7BDF6 /* SolitaireGame.swift */; };
+		4CD952B82B8D48E400109005 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */; };
 		4CEA1C942B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */; };
 		4CEA1CA12B8499CB00B7BDF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA02B8499CB00B7BDF6 /* GameViewController.swift */; };
 		4CEA1CA42B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA22B8499CB00B7BDF6 /* Main.storyboard */; };
@@ -1252,6 +1253,7 @@
 				4CEA1E872B84A25600B7BDF6 /* SystemFonts.swift in Sources */,
 				4CEA1CD22B84A07600B7BDF6 /* SwiftyPlistManager.swift in Sources */,
 				4CEA1E832B84A25600B7BDF6 /* ColorConvertible.swift in Sources */,
+				4CD952B82B8D48E400109005 /* SettingsTableViewController.swift in Sources */,
 				4CEA1D602B84A1BB00B7BDF6 /* SKTAudio.swift in Sources */,
 				4CEA1D562B84A1BB00B7BDF6 /* Vector3.swift in Sources */,
 				4CEA1D2B2B84A14C00B7BDF6 /* TupleObservable.swift in Sources */,

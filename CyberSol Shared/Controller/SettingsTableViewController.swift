@@ -30,7 +30,7 @@ var playTones = true
 var permitUndoRedo = true
 var permitCheating = true
 
-
+#if os(iOS)
 class SettingsTableViewController: UITableViewController,UIPopoverControllerDelegate {
  
     @IBOutlet weak var settingsTonesSwitch: UISwitch!
@@ -120,5 +120,6 @@ func writeSettingsList() {
         }
     }
 }
+#endif
 
 
