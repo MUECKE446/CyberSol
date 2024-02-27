@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -707,8 +708,90 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="GameViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hFW-O5-vI4" userLabel="playableRectView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="733"/>
+                                <viewLayoutGuide key="safeArea" id="DoM-Xc-HBv"/>
+                                <viewLayoutGuide key="layoutMargins" id="Ml3-w9-HNS"/>
+                            </customView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="359-ud-Wvh" userLabel="ScoreValue">
+                                <rect key="frame" x="18" y="734" width="140" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="RK6-As-Bis"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Score:" id="Rag-rG-Aa9">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qpg-86-iDz" userLabel="choose another Game Button">
+                                <rect key="frame" x="415" y="734" width="200" height="32"/>
+                                <buttonCell key="cell" type="push" title="wähle ein neues Spiel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DYw-be-1QR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fLR-ld-vuI"/>
+                                </constraints>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="hcU-YT-FYm" userLabel="Redo">
+                                <rect key="frame" x="758" y="734" width="47" height="34"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-redo-1" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6Tv-o1-pbt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="ADV-qU-g1Z"/>
+                                </constraints>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="HkX-ax-QWM" userLabel="Undo">
+                                <rect key="frame" x="937" y="734" width="48" height="34"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-undo-1" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tfP-4X-ldT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="WIh-e5-rKq"/>
+                                </constraints>
+                            </button>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-tf-uFO" userLabel="Game Name Label">
+                                <rect key="frame" x="173" y="735" width="237" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="Y5K-Xq-tUb"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name des Spiels" id="2wz-Xc-Ik5">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hFW-O5-vI4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="0yd-0s-E1T"/>
+                            <constraint firstItem="hcU-YT-FYm" firstAttribute="leading" secondItem="Qpg-86-iDz" secondAttribute="trailing" constant="150" id="2nl-2t-Zib"/>
+                            <constraint firstItem="hcU-YT-FYm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="4OB-e7-8rh"/>
+                            <constraint firstItem="hFW-O5-vI4" firstAttribute="top" secondItem="Qpg-86-iDz" secondAttribute="bottom" constant="8" id="6QG-Pp-BLu"/>
+                            <constraint firstItem="hFW-O5-vI4" firstAttribute="top" secondItem="359-ud-Wvh" secondAttribute="bottom" constant="1" id="6xP-wN-xLN"/>
+                            <constraint firstItem="hFW-O5-vI4" firstAttribute="bottom" secondItem="VlX-Kr-wOH" secondAttribute="bottom" id="9an-xG-0Yp"/>
+                            <constraint firstAttribute="trailing" secondItem="HkX-ax-QWM" secondAttribute="trailing" constant="39" id="C0D-SB-fXP"/>
+                            <constraint firstItem="359-ud-Wvh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Dh9-Ou-Ltp"/>
+                            <constraint firstItem="359-ud-Wvh" firstAttribute="bottom" secondItem="hcU-YT-FYm" secondAttribute="bottom" id="EGC-Kv-yUc"/>
+                            <constraint firstItem="7Kz-tf-uFO" firstAttribute="leading" secondItem="359-ud-Wvh" secondAttribute="trailing" constant="19" id="JMC-le-lo6"/>
+                            <constraint firstItem="hcU-YT-FYm" firstAttribute="bottom" secondItem="HkX-ax-QWM" secondAttribute="bottom" id="QEq-qY-CWp"/>
+                            <constraint firstItem="Qpg-86-iDz" firstAttribute="centerY" secondItem="hcU-YT-FYm" secondAttribute="centerY" id="Uwx-lS-vgY"/>
+                            <constraint firstItem="Qpg-86-iDz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Kz-tf-uFO" secondAttribute="trailing" symbolic="YES" id="Wkp-Ga-C4Z"/>
+                            <constraint firstItem="hFW-O5-vI4" firstAttribute="top" secondItem="7Kz-tf-uFO" secondAttribute="bottom" constant="2" id="deK-fr-Q67"/>
+                            <constraint firstItem="7Kz-tf-uFO" firstAttribute="top" secondItem="Qpg-86-iDz" secondAttribute="top" id="izz-to-j7t"/>
+                            <constraint firstAttribute="trailing" secondItem="hcU-YT-FYm" secondAttribute="trailing" constant="219" id="jEo-qX-cBx"/>
+                            <constraint firstItem="359-ud-Wvh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="kjU-ty-Nza"/>
+                            <constraint firstItem="hcU-YT-FYm" firstAttribute="top" secondItem="HkX-ax-QWM" secondAttribute="top" id="wOq-Y9-bOr"/>
+                            <constraint firstAttribute="trailing" secondItem="hFW-O5-vI4" secondAttribute="trailing" id="yz4-32-qf0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VlX-Kr-wOH"/>
+                        <viewLayoutGuide key="layoutMargins" id="W7M-HE-ioG"/>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -716,4 +799,8 @@
             <point key="canvasLocation" x="75" y="817"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-redo-1" width="30" height="30"/>
+        <image name="icon-undo-1" width="30" height="30"/>
+    </resources>
 </document>
