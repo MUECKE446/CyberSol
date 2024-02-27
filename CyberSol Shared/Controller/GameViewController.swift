@@ -703,14 +703,33 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
 
     var zaehler = 0
 
+    /*
     @IBOutlet weak var undoButton: NSButton!
     @IBOutlet weak var redoButton: NSButton!
     @IBOutlet weak var chooseAnotherGameButton: NSButton!
     @IBOutlet weak var ScoreValueLabel: NSTextField!
     @IBOutlet weak var playableAreaView: NSView!
     @IBOutlet weak var gameNameLabel: NSTextField!
+    */
     
+    @IBOutlet weak var undoButton: NSButton!
+    @IBOutlet weak var redoButton: NSButton!
+    @IBOutlet weak var chooseAnotherGameButton: NSButton!
+    @IBOutlet weak var gameNameLabel: NSTextField!
+    @IBOutlet weak var ScoreValueLabel: NSTextField!
+    @IBOutlet weak var playableAreaView: NSView!
     
+    @IBAction func ChooseAnatherGameButton(_ sender: Any) {
+        log.verbose("GameVC dismiss")
+        self.dismiss(self)
+        //self.dismiss(animated: true)
+        //{
+            self.view.layer = nil
+            self.scene = nil
+            self.game = nil
+    }
+    
+    /*
     @IBAction func ChooseAnotherGameButton(_ sender: Any) {
         log.verbose("GameVC dismiss")
         self.dismiss(self)
@@ -721,6 +740,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
             self.game = nil
         //}
    }
+   */
     
     // überschreiben der (read-only) property undoManager
     // Hilfsvariable
@@ -779,8 +799,9 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         scene?.sceneDelegate = self
 
         // nachdem die zu bespielende Fläche festgelegt wurde, kann ein Spiel ausgewählt werden
+        // TODO: muss behoben werden wirder rein
         game = SolitaireGame(gameName: gameName, playingAreaRect: playableRect, undoManager: self.undoManager, userInteractionProtocolDelegate: self)
-
+        
         // das Layout des Spiels ist jetzt fertig
         // die CardNodes und EmptyPileNodes wurden erzeugt und sind in den Arrays der scene abgelegt !!! deshalb scene vor game erzeugern !!!
         // nun kann die scene angezeigt werden

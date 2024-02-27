@@ -195,6 +195,7 @@ class SolitaireGame: NSObject {
         self.gameName = gameName
         self.undoManager = undoManager
         
+        
         // hole Statistik
         self.gameStatistic = getGameStatisticFor(gameName)!
         
@@ -259,7 +260,6 @@ class SolitaireGame: NSObject {
         super.init()      // nur wenn von NSObject abgeleitet wurde
         
         appDelegate.currentActiveGame = self
-        
         // jetzt werden die maximalen Höhen der Piles berechnet
         // bei jedem Pile wird untersucht (falls es ein Pile mit veränderlicher Größe ist ->overlapped)
         // ob sich ein anderer Pile unter ihm befindet.
@@ -269,7 +269,6 @@ class SolitaireGame: NSObject {
         startPile = createStartPile(gameLayout!.numberOfDecks)
         
         self.playMove = PlayMove(game: self)
-
     }
     
     deinit {
