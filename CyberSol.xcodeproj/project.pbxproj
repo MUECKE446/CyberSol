@@ -17,14 +17,6 @@
 		4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
 		4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E932B84A29900B7BDF6 /* PileEmptyNode.swift */; };
-		4CD952AF2B8D40B900109005 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D022B84A11400B7BDF6 /* Card.swift */; };
-		4CD952B02B8D412700109005 /* GameLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D002B84A11400B7BDF6 /* GameLayout.swift */; };
-		4CD952B12B8D419400109005 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D032B84A11400B7BDF6 /* Pile.swift */; };
-		4CD952B22B8D41A200109005 /* PileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CFF2B84A11400B7BDF6 /* PileLayout.swift */; };
-		4CD952B32B8D41C100109005 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
-		4CD952B52B8D41EC00109005 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
-		4CD952B72B8D43C200109005 /* SolitaireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D012B84A11400B7BDF6 /* SolitaireGame.swift */; };
-		4CD952B82B8D48E400109005 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */; };
 		4CD952EB2B8E25EA00109005 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CBF2B84A00B00B7BDF6 /* GameViewController.swift */; };
 		4CEA1C942B8499CB00B7BDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1C922B8499CB00B7BDF6 /* Main.storyboard */; };
 		4CEA1CA42B8499CB00B7BDF6 /* Main_macOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1CA22B8499CB00B7BDF6 /* Main_macOS.storyboard */; };
@@ -78,39 +70,22 @@
 		4CEA1D0B2B84A11400B7BDF6 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
 		4CEA1D0C2B84A11400B7BDF6 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
 		4CEA1D1A2B84A14C00B7BDF6 /* EventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D0F2B84A14C00B7BDF6 /* EventReference.swift */; };
-		4CEA1D1B2B84A14C00B7BDF6 /* EventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D0F2B84A14C00B7BDF6 /* EventReference.swift */; };
 		4CEA1D1C2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D102B84A14C00B7BDF6 /* OwningEventReference.swift */; };
-		4CEA1D1D2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D102B84A14C00B7BDF6 /* OwningEventReference.swift */; };
 		4CEA1D1E2B84A14C00B7BDF6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D112B84A14C00B7BDF6 /* Event.swift */; };
-		4CEA1D1F2B84A14C00B7BDF6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D112B84A14C00B7BDF6 /* Event.swift */; };
 		4CEA1D202B84A14C00B7BDF6 /* ObservableReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D122B84A14C00B7BDF6 /* ObservableReference.swift */; };
-		4CEA1D212B84A14C00B7BDF6 /* ObservableReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D122B84A14C00B7BDF6 /* ObservableReference.swift */; };
 		4CEA1D222B84A14C00B7BDF6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D132B84A14C00B7BDF6 /* Observable.swift */; };
-		4CEA1D232B84A14C00B7BDF6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D132B84A14C00B7BDF6 /* Observable.swift */; };
 		4CEA1D242B84A14C00B7BDF6 /* EventSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D142B84A14C00B7BDF6 /* EventSubscription.swift */; };
-		4CEA1D252B84A14C00B7BDF6 /* EventSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D142B84A14C00B7BDF6 /* EventSubscription.swift */; };
 		4CEA1D262B84A14C00B7BDF6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D152B84A14C00B7BDF6 /* Protocols.swift */; };
-		4CEA1D272B84A14C00B7BDF6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D152B84A14C00B7BDF6 /* Protocols.swift */; };
 		4CEA1D282B84A14C00B7BDF6 /* ObservableChainingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D162B84A14C00B7BDF6 /* ObservableChainingProxy.swift */; };
-		4CEA1D292B84A14C00B7BDF6 /* ObservableChainingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D162B84A14C00B7BDF6 /* ObservableChainingProxy.swift */; };
 		4CEA1D2A2B84A14C00B7BDF6 /* TupleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D172B84A14C00B7BDF6 /* TupleObservable.swift */; };
-		4CEA1D2B2B84A14C00B7BDF6 /* TupleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D172B84A14C00B7BDF6 /* TupleObservable.swift */; };
 		4CEA1D2C2B84A14C00B7BDF6 /* ObservableProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D182B84A14C00B7BDF6 /* ObservableProxy.swift */; };
-		4CEA1D2D2B84A14C00B7BDF6 /* ObservableProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D182B84A14C00B7BDF6 /* ObservableProxy.swift */; };
 		4CEA1D382B84A18900B7BDF6 /* game(Spider).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D312B84A18800B7BDF6 /* game(Spider).plist */; };
-		4CEA1D392B84A18900B7BDF6 /* game(Spider).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D312B84A18800B7BDF6 /* game(Spider).plist */; };
 		4CEA1D3A2B84A18900B7BDF6 /* game(Napoleons Square).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D322B84A18800B7BDF6 /* game(Napoleons Square).plist */; };
-		4CEA1D3B2B84A18900B7BDF6 /* game(Napoleons Square).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D322B84A18800B7BDF6 /* game(Napoleons Square).plist */; };
 		4CEA1D3C2B84A18900B7BDF6 /* game(Blockade).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D332B84A18800B7BDF6 /* game(Blockade).plist */; };
-		4CEA1D3D2B84A18900B7BDF6 /* game(Blockade).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D332B84A18800B7BDF6 /* game(Blockade).plist */; };
 		4CEA1D3E2B84A18900B7BDF6 /* game(Black Widow weich).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D342B84A18800B7BDF6 /* game(Black Widow weich).plist */; };
-		4CEA1D3F2B84A18900B7BDF6 /* game(Black Widow weich).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D342B84A18800B7BDF6 /* game(Black Widow weich).plist */; };
 		4CEA1D402B84A18900B7BDF6 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D352B84A18800B7BDF6 /* SettingsList.plist */; };
-		4CEA1D412B84A18900B7BDF6 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D352B84A18800B7BDF6 /* SettingsList.plist */; };
 		4CEA1D422B84A18900B7BDF6 /* game(Black Widow hart).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D362B84A18800B7BDF6 /* game(Black Widow hart).plist */; };
-		4CEA1D432B84A18900B7BDF6 /* game(Black Widow hart).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D362B84A18800B7BDF6 /* game(Black Widow hart).plist */; };
 		4CEA1D442B84A18900B7BDF6 /* statisticsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D372B84A18800B7BDF6 /* statisticsList.plist */; };
-		4CEA1D452B84A18900B7BDF6 /* statisticsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D372B84A18800B7BDF6 /* statisticsList.plist */; };
 		4CEA1D532B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D472B84A1BB00B7BDF6 /* SKTEffects.swift */; };
 		4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D472B84A1BB00B7BDF6 /* SKTEffects.swift */; };
 		4CEA1D552B84A1BB00B7BDF6 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D482B84A1BB00B7BDF6 /* Vector3.swift */; };
@@ -290,43 +265,24 @@
 		4CEA1E522B84A21E00B7BDF6 /* Card36.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1DD92B84A21E00B7BDF6 /* Card36.png */; };
 		4CEA1E532B84A21E00B7BDF6 /* Card36.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1DD92B84A21E00B7BDF6 /* Card36.png */; };
 		4CEA1E682B84A25600B7BDF6 /* CommonsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E552B84A25500B7BDF6 /* CommonsAttributes.swift */; };
-		4CEA1E692B84A25600B7BDF6 /* CommonsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E552B84A25500B7BDF6 /* CommonsAttributes.swift */; };
 		4CEA1E6A2B84A25600B7BDF6 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E562B84A25500B7BDF6 /* String+Ext.swift */; };
-		4CEA1E6B2B84A25600B7BDF6 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E562B84A25500B7BDF6 /* String+Ext.swift */; };
 		4CEA1E6C2B84A25600B7BDF6 /* StyleRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E572B84A25500B7BDF6 /* StyleRegEx.swift */; };
-		4CEA1E6D2B84A25600B7BDF6 /* StyleRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E572B84A25500B7BDF6 /* StyleRegEx.swift */; };
 		4CEA1E6E2B84A25600B7BDF6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E582B84A25500B7BDF6 /* Style.swift */; };
-		4CEA1E6F2B84A25600B7BDF6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E582B84A25500B7BDF6 /* Style.swift */; };
 		4CEA1E702B84A25600B7BDF6 /* FontInfoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E592B84A25500B7BDF6 /* FontInfoAttribute.swift */; };
-		4CEA1E712B84A25600B7BDF6 /* FontInfoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E592B84A25500B7BDF6 /* FontInfoAttribute.swift */; };
 		4CEA1E722B84A25600B7BDF6 /* StylesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5A2B84A25500B7BDF6 /* StylesManager.swift */; };
-		4CEA1E732B84A25600B7BDF6 /* StylesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5A2B84A25500B7BDF6 /* StylesManager.swift */; };
 		4CEA1E742B84A25600B7BDF6 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5B2B84A25500B7BDF6 /* String+Subscript.swift */; };
-		4CEA1E752B84A25600B7BDF6 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5B2B84A25500B7BDF6 /* String+Subscript.swift */; };
 		4CEA1E762B84A25600B7BDF6 /* UIKit+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5C2B84A25600B7BDF6 /* UIKit+Extras.swift */; };
-		4CEA1E772B84A25600B7BDF6 /* UIKit+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5C2B84A25600B7BDF6 /* UIKit+Extras.swift */; };
 		4CEA1E782B84A25600B7BDF6 /* AssociatedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5D2B84A25600B7BDF6 /* AssociatedValues.swift */; };
-		4CEA1E792B84A25600B7BDF6 /* AssociatedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5D2B84A25600B7BDF6 /* AssociatedValues.swift */; };
 		4CEA1E7A2B84A25600B7BDF6 /* FontConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5E2B84A25600B7BDF6 /* FontConvertible.swift */; };
-		4CEA1E7B2B84A25600B7BDF6 /* FontConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5E2B84A25600B7BDF6 /* FontConvertible.swift */; };
 		4CEA1E7C2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5F2B84A25600B7BDF6 /* AttributedString+Ext.swift */; };
-		4CEA1E7D2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5F2B84A25600B7BDF6 /* AttributedString+Ext.swift */; };
 		4CEA1E7E2B84A25600B7BDF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E602B84A25600B7BDF6 /* Extensions.swift */; };
-		4CEA1E7F2B84A25600B7BDF6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E602B84A25600B7BDF6 /* Extensions.swift */; };
 		4CEA1E802B84A25600B7BDF6 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E612B84A25600B7BDF6 /* FontData.swift */; };
-		4CEA1E812B84A25600B7BDF6 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E612B84A25600B7BDF6 /* FontData.swift */; };
 		4CEA1E822B84A25600B7BDF6 /* ColorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E622B84A25600B7BDF6 /* ColorConvertible.swift */; };
-		4CEA1E832B84A25600B7BDF6 /* ColorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E622B84A25600B7BDF6 /* ColorConvertible.swift */; };
 		4CEA1E842B84A25600B7BDF6 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E632B84A25600B7BDF6 /* Compatibility.swift */; };
-		4CEA1E852B84A25600B7BDF6 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E632B84A25600B7BDF6 /* Compatibility.swift */; };
 		4CEA1E862B84A25600B7BDF6 /* SystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E642B84A25600B7BDF6 /* SystemFonts.swift */; };
-		4CEA1E872B84A25600B7BDF6 /* SystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E642B84A25600B7BDF6 /* SystemFonts.swift */; };
 		4CEA1E882B84A25600B7BDF6 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E652B84A25600B7BDF6 /* OrderedDictionary.swift */; };
-		4CEA1E892B84A25600B7BDF6 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E652B84A25600B7BDF6 /* OrderedDictionary.swift */; };
 		4CEA1E8A2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E662B84A25600B7BDF6 /* StyleProtocol.swift */; };
-		4CEA1E8B2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E662B84A25600B7BDF6 /* StyleProtocol.swift */; };
 		4CEA1E8C2B84A25600B7BDF6 /* StyleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E672B84A25600B7BDF6 /* StyleGroup.swift */; };
-		4CEA1E8D2B84A25600B7BDF6 /* StyleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E672B84A25600B7BDF6 /* StyleGroup.swift */; };
 		4CEA1E942B84A29900B7BDF6 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
 		4CEA1E952B84A29900B7BDF6 /* UserInteractionProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E902B84A29900B7BDF6 /* UserInteractionProtocolDelegate.swift */; };
 		4CEA1E962B84A29900B7BDF6 /* TouchesProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E912B84A29900B7BDF6 /* TouchesProtocolDelegate.swift */; };
@@ -1025,7 +981,6 @@
 				4CEA1E112B84A21E00B7BDF6 /* Card19.png in Resources */,
 				4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */,
 				4CEA1E1B2B84A21E00B7BDF6 /* Card14.png in Resources */,
-				4CEA1D3F2B84A18900B7BDF6 /* game(Black Widow weich).plist in Resources */,
 				4CEA1CE32B84A0B300B7BDF6 /* icon-undo-1.png in Resources */,
 				4CEA1E092B84A21E00B7BDF6 /* Card9.png in Resources */,
 				4CEA1E1F2B84A21E00B7BDF6 /* Card23.png in Resources */,
@@ -1034,14 +989,12 @@
 				4CEA1E252B84A21E00B7BDF6 /* Card49.png in Resources */,
 				4CEA1DE52B84A21E00B7BDF6 /* Card26.png in Resources */,
 				4CEA1CA42B8499CB00B7BDF6 /* Main_macOS.storyboard in Resources */,
-				4CEA1D3D2B84A18900B7BDF6 /* game(Blockade).plist in Resources */,
 				4CEA1DE32B84A21E00B7BDF6 /* Card37.png in Resources */,
 				4CEA1CF32B84A0B300B7BDF6 /* icon-settings.png in Resources */,
 				4CEA1E152B84A21E00B7BDF6 /* Card15.png in Resources */,
 				4CEA1DDD2B84A21E00B7BDF6 /* Card2.png in Resources */,
 				4CEA1E452B84A21E00B7BDF6 /* Card46.png in Resources */,
 				4CEA1CED2B84A0B300B7BDF6 /* icon-settings-1.png in Resources */,
-				4CEA1D392B84A18900B7BDF6 /* game(Spider).plist in Resources */,
 				4CEA1D872B84A1E700B7BDF6 /* gallop.caf in Resources */,
 				4CEA1D812B84A1E700B7BDF6 /* ja.caf in Resources */,
 				4CEA1DDB2B84A21E00B7BDF6 /* Card16.png in Resources */,
@@ -1049,7 +1002,6 @@
 				4CEA1E4D2B84A21E00B7BDF6 /* Card32.png in Resources */,
 				4CEA1DE72B84A21E00B7BDF6 /* Card45.png in Resources */,
 				4CEA1D7D2B84A1E700B7BDF6 /* minus.caf in Resources */,
-				4CEA1D452B84A18900B7BDF6 /* statisticsList.plist in Resources */,
 				4CEA1E012B84A21E00B7BDF6 /* PileEmpty-4.png in Resources */,
 				4CEA1D7F2B84A1E700B7BDF6 /* boing.caf in Resources */,
 				4CEA1DF12B84A21E00B7BDF6 /* Card27.png in Resources */,
@@ -1065,14 +1017,12 @@
 				4CEA1DFB2B84A21E00B7BDF6 /* Card1.png in Resources */,
 				4CEA1DF92B84A21E00B7BDF6 /* PileEmpty-7.png in Resources */,
 				4CEA1E3B2B84A21E00B7BDF6 /* Card10.png in Resources */,
-				4CEA1D412B84A18900B7BDF6 /* SettingsList.plist in Resources */,
 				4CEA1E352B84A21E00B7BDF6 /* Card25.png in Resources */,
 				4CEA1D9B2B84A1E700B7BDF6 /* mix.caf in Resources */,
 				4CEA1D852B84A1E700B7BDF6 /* bearings.caf in Resources */,
 				4CEA1D8B2B84A1E700B7BDF6 /* put.caf in Resources */,
 				4CEA1CF92B84A0B300B7BDF6 /* icon-redo.png in Resources */,
 				4CEA1E2D2B84A21E00B7BDF6 /* Card51.png in Resources */,
-				4CEA1D3B2B84A18900B7BDF6 /* game(Napoleons Square).plist in Resources */,
 				4CEA1CF72B84A0B300B7BDF6 /* cyberSolitaire-icon-1024.png in Resources */,
 				4CEA1E412B84A21E00B7BDF6 /* Card17.png in Resources */,
 				4CEA1E052B84A21E00B7BDF6 /* Card11.png in Resources */,
@@ -1085,7 +1035,6 @@
 				4CEA1E4F2B84A21E00B7BDF6 /* Card8.png in Resources */,
 				4CEA1D912B84A1E700B7BDF6 /* select.caf in Resources */,
 				4CEA1CF12B84A0B300B7BDF6 /* icons8-redo-48.png in Resources */,
-				4CEA1D432B84A18900B7BDF6 /* game(Black Widow hart).plist in Resources */,
 				4CEA1D8F2B84A1E700B7BDF6 /* clapping.caf in Resources */,
 				4CEA1CF52B84A0B300B7BDF6 /* BackgroundWildWest.png in Resources */,
 				4CEA1DE12B84A21E00B7BDF6 /* Card41.png in Resources */,
@@ -1197,66 +1146,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEA1D1B2B84A14C00B7BDF6 /* EventReference.swift in Sources */,
 				4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */,
 				4CEA1D5C2B84A1BB00B7BDF6 /* CGVector+Extensions.swift in Sources */,
-				4CEA1E692B84A25600B7BDF6 /* CommonsAttributes.swift in Sources */,
-				4CEA1E752B84A25600B7BDF6 /* String+Subscript.swift in Sources */,
 				4CEA1D642B84A1BB00B7BDF6 /* Int+Extensions.swift in Sources */,
-				4CD952B32B8D41C100109005 /* PlayMove.swift in Sources */,
-				4CEA1E7B2B84A25600B7BDF6 /* FontConvertible.swift in Sources */,
-				4CEA1D232B84A14C00B7BDF6 /* Observable.swift in Sources */,
-				4CD952B72B8D43C200109005 /* SolitaireGame.swift in Sources */,
-				4CEA1E6B2B84A25600B7BDF6 /* String+Ext.swift in Sources */,
 				4C35F2C92B869563000762C3 /* GameScene.swift in Sources */,
-				4CD952B22B8D41A200109005 /* PileLayout.swift in Sources */,
-				4CEA1D1F2B84A14C00B7BDF6 /* Event.swift in Sources */,
-				4CEA1E6F2B84A25600B7BDF6 /* Style.swift in Sources */,
-				4CD952B02B8D412700109005 /* GameLayout.swift in Sources */,
 				4CEA1D582B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
-				4CEA1D252B84A14C00B7BDF6 /* EventSubscription.swift in Sources */,
-				4CEA1E732B84A25600B7BDF6 /* StylesManager.swift in Sources */,
-				4CEA1E852B84A25600B7BDF6 /* Compatibility.swift in Sources */,
 				4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
-				4CEA1E772B84A25600B7BDF6 /* UIKit+Extras.swift in Sources */,
-				4CD952AF2B8D40B900109005 /* Card.swift in Sources */,
 				4CEA1CCE2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
 				4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */,
 				4CEA1CC82B84A01D00B7BDF6 /* ActionLogger.swift in Sources */,
-				4CEA1E892B84A25600B7BDF6 /* OrderedDictionary.swift in Sources */,
-				4CEA1D2D2B84A14C00B7BDF6 /* ObservableProxy.swift in Sources */,
-				4CEA1D292B84A14C00B7BDF6 /* ObservableChainingProxy.swift in Sources */,
-				4CEA1E812B84A25600B7BDF6 /* FontData.swift in Sources */,
-				4CEA1E792B84A25600B7BDF6 /* AssociatedValues.swift in Sources */,
-				4CEA1D272B84A14C00B7BDF6 /* Protocols.swift in Sources */,
-				4CEA1E7F2B84A25600B7BDF6 /* Extensions.swift in Sources */,
 				4CEA1D5E2B84A1BB00B7BDF6 /* SKColor+Extensions.swift in Sources */,
 				4CEA1D622B84A1BB00B7BDF6 /* SKTTimingFunctions.swift in Sources */,
 				4CEA1D5A2B84A1BB00B7BDF6 /* SKNode+Extensions.swift in Sources */,
 				4CD952EB2B8E25EA00109005 /* GameViewController.swift in Sources */,
-				4CEA1D1D2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */,
 				4CEA1D662B84A1BB00B7BDF6 /* SKAction+SpecialEffects.swift in Sources */,
 				4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */,
-				4CEA1E6D2B84A25600B7BDF6 /* StyleRegEx.swift in Sources */,
-				4CD952B12B8D419400109005 /* Pile.swift in Sources */,
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
 				4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */,
-				4CEA1D212B84A14C00B7BDF6 /* ObservableReference.swift in Sources */,
-				4CEA1E8B2B84A25600B7BDF6 /* StyleProtocol.swift in Sources */,
 				4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */,
-				4CEA1E7D2B84A25600B7BDF6 /* AttributedString+Ext.swift in Sources */,
 				4CEA1D6A2B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D682B84A1BB00B7BDF6 /* SKAction+Extensions.swift in Sources */,
-				4CD952B52B8D41EC00109005 /* Statistics.swift in Sources */,
-				4CEA1E712B84A25600B7BDF6 /* FontInfoAttribute.swift in Sources */,
-				4CEA1E8D2B84A25600B7BDF6 /* StyleGroup.swift in Sources */,
-				4CEA1E872B84A25600B7BDF6 /* SystemFonts.swift in Sources */,
 				4CEA1CD22B84A07600B7BDF6 /* SwiftyPlistManager.swift in Sources */,
-				4CEA1E832B84A25600B7BDF6 /* ColorConvertible.swift in Sources */,
-				4CD952B82B8D48E400109005 /* SettingsTableViewController.swift in Sources */,
 				4CEA1D602B84A1BB00B7BDF6 /* SKTAudio.swift in Sources */,
 				4CEA1D562B84A1BB00B7BDF6 /* Vector3.swift in Sources */,
-				4CEA1D2B2B84A14C00B7BDF6 /* TupleObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1477,21 +1389,21 @@
 				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y8C3Y98A86;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main_macOS;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Muecke-Software.CyberSol";
 				PRODUCT_NAME = CyberSol;
@@ -1510,21 +1422,21 @@
 				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y8C3Y98A86;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main_macOS;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Muecke-Software.CyberSol";
 				PRODUCT_NAME = CyberSol;

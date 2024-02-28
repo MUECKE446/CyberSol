@@ -152,7 +152,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var activityLogURL: URL!
     var dateStr: String!
     
-    var currentActiveGame : SolitaireGame?
+    // TODO: muss wieder raus
+    //var currentActiveGame : SolitaireGame?
     
 
 
