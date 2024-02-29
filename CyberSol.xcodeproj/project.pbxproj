@@ -49,6 +49,14 @@
 		4C5742892B9086EE00A5B9D6 /* StylesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5A2B84A25500B7BDF6 /* StylesManager.swift */; };
 		4C57428A2B9086F200A5B9D6 /* SystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E642B84A25600B7BDF6 /* SystemFonts.swift */; };
 		4C57428B2B9086F900A5B9D6 /* UIKit+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5C2B84A25600B7BDF6 /* UIKit+Extras.swift */; };
+		4C57428D2B90966600A5B9D6 /* SolitaireGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D012B84A11400B7BDF6 /* SolitaireGame.swift */; };
+		4C57428E2B90969700A5B9D6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D022B84A11400B7BDF6 /* Card.swift */; };
+		4C57428F2B90969D00A5B9D6 /* GameLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D002B84A11400B7BDF6 /* GameLayout.swift */; };
+		4C5742902B9096A400A5B9D6 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D032B84A11400B7BDF6 /* Pile.swift */; };
+		4C5742912B9096A900A5B9D6 /* PileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CFF2B84A11400B7BDF6 /* PileLayout.swift */; };
+		4C5742922B9096AE00A5B9D6 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
+		4C5742932B9096B500A5B9D6 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
+		4C5742942B90E16F00A5B9D6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */; };
 		4CD952AB2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
@@ -1191,6 +1199,7 @@
 			files = (
 				4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */,
 				4C5742872B9086E400A5B9D6 /* StyleProtocol.swift in Sources */,
+				4C57428D2B90966600A5B9D6 /* SolitaireGame.swift in Sources */,
 				4C5742702B907DE200A5B9D6 /* EventReference.swift in Sources */,
 				4C57427A2B9086A600A5B9D6 /* AttributedString+Ext.swift in Sources */,
 				4C5742742B907DFA00A5B9D6 /* ObservableProxy.swift in Sources */,
@@ -1203,6 +1212,7 @@
 				4C35F2C92B869563000762C3 /* GameScene.swift in Sources */,
 				4C5742882B9086E800A5B9D6 /* StyleRegEx.swift in Sources */,
 				4CEA1D582B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
+				4C57428F2B90969D00A5B9D6 /* GameLayout.swift in Sources */,
 				4C5742832B9086CF00A5B9D6 /* String+Ext.swift in Sources */,
 				4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
 				4CEA1CCE2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
@@ -1225,6 +1235,7 @@
 				4C57426F2B907DDD00A5B9D6 /* Event.swift in Sources */,
 				4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */,
 				4C5742892B9086EE00A5B9D6 /* StylesManager.swift in Sources */,
+				4C57428E2B90969700A5B9D6 /* Card.swift in Sources */,
 				4C5742812B9086C500A5B9D6 /* FontInfoAttribute.swift in Sources */,
 				4C5742712B907DE800A5B9D6 /* EventSubscription.swift in Sources */,
 				4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */,
@@ -1233,13 +1244,18 @@
 				4CEA1D6A2B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D682B84A1BB00B7BDF6 /* SKAction+Extensions.swift in Sources */,
 				4C5742732B907DF400A5B9D6 /* ObservableChainingProxy.swift in Sources */,
+				4C5742902B9096A400A5B9D6 /* Pile.swift in Sources */,
 				4CEA1CD22B84A07600B7BDF6 /* SwiftyPlistManager.swift in Sources */,
 				4C57427C2B9086AF00A5B9D6 /* CommonsAttributes.swift in Sources */,
+				4C5742932B9096B500A5B9D6 /* Statistics.swift in Sources */,
 				4C5742762B907E0300A5B9D6 /* OwningEventReference.swift in Sources */,
 				4C57427E2B9086B700A5B9D6 /* Extensions.swift in Sources */,
 				4C57427B2B9086AB00A5B9D6 /* ColorConvertible.swift in Sources */,
 				4CEA1D602B84A1BB00B7BDF6 /* SKTAudio.swift in Sources */,
 				4C57427D2B9086B300A5B9D6 /* Compatibility.swift in Sources */,
+				4C5742942B90E16F00A5B9D6 /* SettingsTableViewController.swift in Sources */,
+				4C5742912B9096A900A5B9D6 /* PileLayout.swift in Sources */,
+				4C5742922B9096AE00A5B9D6 /* PlayMove.swift in Sources */,
 				4CEA1D562B84A1BB00B7BDF6 /* Vector3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

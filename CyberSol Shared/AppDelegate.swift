@@ -16,7 +16,7 @@ import Cocoa
 
 
 let log = ActionLogger.defaultLogger()
-var gameName = ""
+var gameName = "Black Widow weich"
 // !!! Achtung: bei jeder Änderung der Version muss diese händisch auch in LaunchScreen.xib gemacht werden !!!
 let CyberSolitaireVersion = "1.4.0"
 
@@ -153,13 +153,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var dateStr: String!
     
     // TODO: muss wieder raus
-    //var currentActiveGame : SolitaireGame?
+    var currentActiveGame : SolitaireGame?
     
-
-
+    // diese function wird vor dem Laden des ViewControllers aufgerufen
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification){
         // Insert code here to initialize your application
-    }
+   }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application

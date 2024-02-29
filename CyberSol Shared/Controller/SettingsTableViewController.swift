@@ -25,11 +25,13 @@ let playTonesKey = "playTones"
 let permitUndoRedoKey = "permitUndoRedo"
 let permitCheatingKey = "permitCheating"
 
+// verschoben in den GameViewController
+/*
 // settings variables, die alle Spiele betreffen
 var playTones = true
 var permitUndoRedo = true
 var permitCheating = true
-
+*/
 #if os(iOS)
 class SettingsTableViewController: UITableViewController,UIPopoverControllerDelegate {
  
@@ -96,6 +98,7 @@ class SettingsTableViewController: UITableViewController,UIPopoverControllerDele
 
 }
 
+#endif
 
 func readSettingList() {
     playTones = SwiftyPlistManager.shared.fetchValue(for: playTonesKey, fromPlistWithName: settingsListName) as! Bool
@@ -120,6 +123,5 @@ func writeSettingsList() {
         }
     }
 }
-#endif
 
 

@@ -166,9 +166,11 @@ class SolitaireGame: NSObject {
 
     var undoManager: UndoManager
     
-    //TODO: es muss überlegt werden, wie diese Eigenschaft gesteuert wird
+    // settings variables, die alle Spiele betreffen
+    var playTones = true
+    var permitUndoRedo = true
     var cheatAllowed = permitCheating
-    
+
     var gameState = GameState.layoutState
     var playMove: PlayMove? = nil
     

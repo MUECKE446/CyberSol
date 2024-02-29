@@ -27,10 +27,12 @@ let playSoundNotification   = "playSoundNotification"
 let selectCardsNotification = "selectCardsNotification"
 let selectPilesNotification = "selectPilesNotification"
 
-
-
-
 var audioPlayer: AVAudioPlayer?
+
+// settings variables, die alle Spiele betreffen
+var playTones = true
+var permitUndoRedo = true
+var permitCheating = true
 
 #if os(iOS)
 
@@ -681,6 +683,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
 class GameViewController: NSViewController, TouchesProtocolDelegate, UserInteractionProtocolDelegate {
     
     // TODO: muss wieder anders gelöst werden
+    /*
     func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint) {
         
     }
@@ -696,6 +699,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     func disableUndoRedo() {
         
     }
+    */
     
 
     
@@ -708,12 +712,10 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         static var listOfActions = [Int]()
     }
     
-    // TODO: muss wieder raus
     var scene: GameScene? = nil
     var scaleFactorForView: CGFloat = 1.0
     
-    // TODO: muss wieder raus
-    //var game: SolitaireGame? = nil
+    var game: SolitaireGame? = nil
     
     var lastPoint: CGPoint? = nil
     
@@ -723,15 +725,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
 
     var zaehler = 0
 
-    /*
-    @IBOutlet weak var undoButton: NSButton!
-    @IBOutlet weak var redoButton: NSButton!
-    @IBOutlet weak var chooseAnotherGameButton: NSButton!
-    @IBOutlet weak var ScoreValueLabel: NSTextField!
-    @IBOutlet weak var playableAreaView: NSView!
-    @IBOutlet weak var gameNameLabel: NSTextField!
-    */
-    
     @IBOutlet weak var undoButton: NSButton!
     @IBOutlet weak var redoButton: NSButton!
     @IBOutlet weak var chooseAnotherGameButton: NSButton!
@@ -739,20 +732,13 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     @IBOutlet weak var ScoreValueLabel: NSTextField!
     @IBOutlet weak var playableAreaView: NSView!
     
-    @IBAction func ChooseAnotherGameButton(_ sender: Any) {
-    }
-    /*
     @IBAction func ChooseAnotherGameButton(_ sender: Any) {
         log.verbose("GameVC dismiss")
         self.dismiss(self)
-        //self.dismiss(animated: true)
-        //{
-            self.view.layer = nil
-            self.scene = nil
-            self.game = nil
-        //}
-   }
-   */
+        self.view.layer = nil
+        self.scene = nil
+        self.game = nil
+    }
     
     // überschreiben der (read-only) property undoManager
     // Hilfsvariable
@@ -777,13 +763,11 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // Notifications einrichten
         let notificationCenter = NotificationCenter.default
         // TODO: muss wieder raus
-        /*
         notificationCenter.addObserver(self, selector: #selector(GameViewController.createNodeForCard(_:)), name: NSNotification.Name(rawValue: cardCreatedNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.createNodeForEmptyPile(_:)), name: NSNotification.Name(rawValue: pileCreatedNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.playSound(_:)), name: NSNotification.Name(rawValue: playSoundNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.selectCardsInView(_:)), name: NSNotification.Name(rawValue: selectCardsNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.selectPilesInView(_:)), name: NSNotification.Name(rawValue: selectPilesNotification), object: nil)
-        */
         
         // ich fand es besser so
 //        chooseAnotherGameButton.backgroundColor = UIColor.white
@@ -794,7 +778,15 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // redo ist gar nicht nötig
         redoButton.isHidden = true
         
-        
+        // MARK: Start des SwiftyPlistManager
+        allPListNames.append(settingsListName)
+        allPListNames.append(statisticsListName)
+        allPListNames.append(contentsOf: allPListNames)
+        SwiftyPlistManager.shared.start(plistNames: allPListNames, logging: false)
+
+        readSettingList()
+        readStatisticsList()
+
         // die erste Scene einrichten
         // die Scene füllt den gesamten View aus
         let viewFrame = view.frame
@@ -814,8 +806,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         scene?.sceneDelegate = self
 
         // nachdem die zu bespielende Fläche festgelegt wurde, kann ein Spiel ausgewählt werden
-        // TODO: muss behoben werden wirder rein
-        //game = SolitaireGame(gameName: gameName, playingAreaRect: playableRect, undoManager: self.undoManager, userInteractionProtocolDelegate: self)
+        game = SolitaireGame(gameName: gameName, playingAreaRect: playableRect, undoManager: self.undoManager, userInteractionProtocolDelegate: self)
         
         // das Layout des Spiels ist jetzt fertig
         // die CardNodes und EmptyPileNodes wurden erzeugt und sind in den Arrays der scene abgelegt !!! deshalb scene vor game erzeugern !!!
@@ -824,7 +815,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         let skView = self.view as! SKView
 
         // zeige das aktuelle Spiel an
-        //gameNameLabel.text = gameName
         gameNameLabel.stringValue = gameName
 
         // für den Test
@@ -839,8 +829,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // deshalb in viewDidDisAppear: self.view = nil, damit GameScene deallocated werden kann
         skView.presentScene(scene)
         
-        // TODO: muss wieder raus
-        /*
         // MARK: add Observer handler
         
         moveCard!.afterChange += {
@@ -995,17 +983,13 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         }
         
         // MARK: Ende Observer Handler
-        */
         
         
-        // TODO: muss wieder raus
-        /*
         self.game!.dealoutStartFormation()
         game!.gameState = .runningState
-        */
         
         // TODO: ändern für macOS
-        //log.verbose("ab jetzt kann gespielt werden. userInteraction = \(view.isUserInteractionEnabled) Zaehler = \(zaehler)")
+        log.verbose("ab jetzt kann gespielt werden. Zaehler = \(zaehler)")
         
         //logGameStart()
     }
@@ -1014,9 +998,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         log.verbose("GameVC deinit")
     }
     
-    // TODO: ändern für macOS
-/*
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear() {
         log.verbose("ich verschwinde")
         // Statistik verarbeiten
         if game!.isGameWon() {
@@ -1028,7 +1010,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         }
         game!.gameStatistic.totalTime = game!.totalTimeGame
         game!.gameStatistic.totalPlayed += 1                 // wieder ein Spiel mehr
-
+        
         updateStatisticsListFor(game!.gameName, with: game!.gameStatistic)
         
         let notificationCenter = NotificationCenter.default
@@ -1046,11 +1028,10 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         cheatCard = nil
         zPositionCard = nil
         waitForDuration = nil
+        
     }
-*/
-    
     // TODO: muss wieder raus
-    /*
+    ///*
     // MARK: Notification Methoden
     
     @objc func createNodeForCard(_ notification:Notification) {
@@ -1273,11 +1254,12 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         statics.durationTimer = duration
         statics.restTime = duration
         // starte den Timer; der Handler muss versuchen die Interactions wieder zu erlauben
-        statics.timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(GameViewController.setUserInteractionEnabled), userInfo: nil, repeats: false)
+        // TODO: ändern für macOS
+        //statics.timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(GameViewController.setUserInteractionEnabled), userInfo: nil, repeats: false)
         //log.debug("disabled for \(duration)")
     }
     
-    @objc func setUserInteractionEnabled() {
+    func setUserInteractionEnabled() {
         // der Timer muss abgelaufen sein
         if let timer = statics.timer {
             if timer.isValid {
@@ -1313,7 +1295,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     
     // MARK: Button Handler
     
-    
+    /*
     @IBAction func Undo(_ sender: NSButton) {
         if permitUndoRedo {
             //log.messageOnly("Undo")
