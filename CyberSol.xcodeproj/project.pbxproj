@@ -13,6 +13,42 @@
 		4C35F2D22B879A15000762C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F2D02B879A14000762C3 /* LaunchScreen.xib */; };
 		4C35F2DF2B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
 		4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F2DE2B87E674000762C3 /* AppDelegate.swift */; };
+		4C5742682B907CEF00A5B9D6 /* game(Black Widow hart).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D362B84A18800B7BDF6 /* game(Black Widow hart).plist */; };
+		4C5742692B907CF300A5B9D6 /* game(Black Widow weich).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D342B84A18800B7BDF6 /* game(Black Widow weich).plist */; };
+		4C57426A2B907CF700A5B9D6 /* game(Blockade).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D332B84A18800B7BDF6 /* game(Blockade).plist */; };
+		4C57426B2B907CFE00A5B9D6 /* game(Napoleons Square).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D322B84A18800B7BDF6 /* game(Napoleons Square).plist */; };
+		4C57426C2B907D0500A5B9D6 /* game(Spider).plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D312B84A18800B7BDF6 /* game(Spider).plist */; };
+		4C57426D2B907D0A00A5B9D6 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D352B84A18800B7BDF6 /* SettingsList.plist */; };
+		4C57426E2B907D0F00A5B9D6 /* statisticsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA1D372B84A18800B7BDF6 /* statisticsList.plist */; };
+		4C57426F2B907DDD00A5B9D6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D112B84A14C00B7BDF6 /* Event.swift */; };
+		4C5742702B907DE200A5B9D6 /* EventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D0F2B84A14C00B7BDF6 /* EventReference.swift */; };
+		4C5742712B907DE800A5B9D6 /* EventSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D142B84A14C00B7BDF6 /* EventSubscription.swift */; };
+		4C5742722B907DF000A5B9D6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D132B84A14C00B7BDF6 /* Observable.swift */; };
+		4C5742732B907DF400A5B9D6 /* ObservableChainingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D162B84A14C00B7BDF6 /* ObservableChainingProxy.swift */; };
+		4C5742742B907DFA00A5B9D6 /* ObservableProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D182B84A14C00B7BDF6 /* ObservableProxy.swift */; };
+		4C5742752B907DFE00A5B9D6 /* ObservableReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D122B84A14C00B7BDF6 /* ObservableReference.swift */; };
+		4C5742762B907E0300A5B9D6 /* OwningEventReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D102B84A14C00B7BDF6 /* OwningEventReference.swift */; };
+		4C5742772B907E0800A5B9D6 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D152B84A14C00B7BDF6 /* Protocols.swift */; };
+		4C5742782B907E0D00A5B9D6 /* TupleObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D172B84A14C00B7BDF6 /* TupleObservable.swift */; };
+		4C5742792B9086A000A5B9D6 /* AssociatedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5D2B84A25600B7BDF6 /* AssociatedValues.swift */; };
+		4C57427A2B9086A600A5B9D6 /* AttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5F2B84A25600B7BDF6 /* AttributedString+Ext.swift */; };
+		4C57427B2B9086AB00A5B9D6 /* ColorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E622B84A25600B7BDF6 /* ColorConvertible.swift */; };
+		4C57427C2B9086AF00A5B9D6 /* CommonsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E552B84A25500B7BDF6 /* CommonsAttributes.swift */; };
+		4C57427D2B9086B300A5B9D6 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E632B84A25600B7BDF6 /* Compatibility.swift */; };
+		4C57427E2B9086B700A5B9D6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E602B84A25600B7BDF6 /* Extensions.swift */; };
+		4C57427F2B9086BC00A5B9D6 /* FontConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5E2B84A25600B7BDF6 /* FontConvertible.swift */; };
+		4C5742802B9086C100A5B9D6 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E612B84A25600B7BDF6 /* FontData.swift */; };
+		4C5742812B9086C500A5B9D6 /* FontInfoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E592B84A25500B7BDF6 /* FontInfoAttribute.swift */; };
+		4C5742822B9086CA00A5B9D6 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E652B84A25600B7BDF6 /* OrderedDictionary.swift */; };
+		4C5742832B9086CF00A5B9D6 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E562B84A25500B7BDF6 /* String+Ext.swift */; };
+		4C5742842B9086D400A5B9D6 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5B2B84A25500B7BDF6 /* String+Subscript.swift */; };
+		4C5742852B9086DA00A5B9D6 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E582B84A25500B7BDF6 /* Style.swift */; };
+		4C5742862B9086DF00A5B9D6 /* StyleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E672B84A25600B7BDF6 /* StyleGroup.swift */; };
+		4C5742872B9086E400A5B9D6 /* StyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E662B84A25600B7BDF6 /* StyleProtocol.swift */; };
+		4C5742882B9086E800A5B9D6 /* StyleRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E572B84A25500B7BDF6 /* StyleRegEx.swift */; };
+		4C5742892B9086EE00A5B9D6 /* StylesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5A2B84A25500B7BDF6 /* StylesManager.swift */; };
+		4C57428A2B9086F200A5B9D6 /* SystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E642B84A25600B7BDF6 /* SystemFonts.swift */; };
+		4C57428B2B9086F900A5B9D6 /* UIKit+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E5C2B84A25600B7BDF6 /* UIKit+Extras.swift */; };
 		4CD952AB2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
@@ -979,7 +1015,9 @@
 				4CEA1E392B84A21E00B7BDF6 /* PileEmpty-6.png in Resources */,
 				4CEA1E4B2B84A21E00B7BDF6 /* Card28.png in Resources */,
 				4CEA1E112B84A21E00B7BDF6 /* Card19.png in Resources */,
+				4C57426D2B907D0A00A5B9D6 /* SettingsList.plist in Resources */,
 				4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */,
+				4C57426E2B907D0F00A5B9D6 /* statisticsList.plist in Resources */,
 				4CEA1E1B2B84A21E00B7BDF6 /* Card14.png in Resources */,
 				4CEA1CE32B84A0B300B7BDF6 /* icon-undo-1.png in Resources */,
 				4CEA1E092B84A21E00B7BDF6 /* Card9.png in Resources */,
@@ -996,6 +1034,7 @@
 				4CEA1E452B84A21E00B7BDF6 /* Card46.png in Resources */,
 				4CEA1CED2B84A0B300B7BDF6 /* icon-settings-1.png in Resources */,
 				4CEA1D872B84A1E700B7BDF6 /* gallop.caf in Resources */,
+				4C5742692B907CF300A5B9D6 /* game(Black Widow weich).plist in Resources */,
 				4CEA1D812B84A1E700B7BDF6 /* ja.caf in Resources */,
 				4CEA1DDB2B84A21E00B7BDF6 /* Card16.png in Resources */,
 				4CEA1DE92B84A21E00B7BDF6 /* Card12.png in Resources */,
@@ -1015,7 +1054,10 @@
 				4CEA1E072B84A21E00B7BDF6 /* Card50.png in Resources */,
 				4CEA1DFF2B84A21E00B7BDF6 /* Card13.png in Resources */,
 				4CEA1DFB2B84A21E00B7BDF6 /* Card1.png in Resources */,
+				4C5742682B907CEF00A5B9D6 /* game(Black Widow hart).plist in Resources */,
 				4CEA1DF92B84A21E00B7BDF6 /* PileEmpty-7.png in Resources */,
+				4C57426C2B907D0500A5B9D6 /* game(Spider).plist in Resources */,
+				4C57426A2B907CF700A5B9D6 /* game(Blockade).plist in Resources */,
 				4CEA1E3B2B84A21E00B7BDF6 /* Card10.png in Resources */,
 				4CEA1E352B84A21E00B7BDF6 /* Card25.png in Resources */,
 				4CEA1D9B2B84A1E700B7BDF6 /* mix.caf in Resources */,
@@ -1054,6 +1096,7 @@
 				4CEA1CFD2B84A0B300B7BDF6 /* icon-undo-48.png in Resources */,
 				4CEA1D952B84A1E700B7BDF6 /* weird.caf in Resources */,
 				4CEA1D832B84A1E700B7BDF6 /* incorrect.caf in Resources */,
+				4C57426B2B907CFE00A5B9D6 /* game(Napoleons Square).plist in Resources */,
 				4CEA1E0D2B84A21E00B7BDF6 /* Card34.png in Resources */,
 				4CEA1E2B2B84A21E00B7BDF6 /* PileEmpty-0.png in Resources */,
 				4CEA1E132B84A21E00B7BDF6 /* PileEmpty-3.png in Resources */,
@@ -1147,27 +1190,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD952AE2B8D3E7D00109005 /* PileEmptyNode.swift in Sources */,
+				4C5742872B9086E400A5B9D6 /* StyleProtocol.swift in Sources */,
+				4C5742702B907DE200A5B9D6 /* EventReference.swift in Sources */,
+				4C57427A2B9086A600A5B9D6 /* AttributedString+Ext.swift in Sources */,
+				4C5742742B907DFA00A5B9D6 /* ObservableProxy.swift in Sources */,
 				4CEA1D5C2B84A1BB00B7BDF6 /* CGVector+Extensions.swift in Sources */,
+				4C5742852B9086DA00A5B9D6 /* Style.swift in Sources */,
+				4C5742822B9086CA00A5B9D6 /* OrderedDictionary.swift in Sources */,
+				4C5742752B907DFE00A5B9D6 /* ObservableReference.swift in Sources */,
 				4CEA1D642B84A1BB00B7BDF6 /* Int+Extensions.swift in Sources */,
+				4C5742862B9086DF00A5B9D6 /* StyleGroup.swift in Sources */,
 				4C35F2C92B869563000762C3 /* GameScene.swift in Sources */,
+				4C5742882B9086E800A5B9D6 /* StyleRegEx.swift in Sources */,
 				4CEA1D582B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
+				4C5742832B9086CF00A5B9D6 /* String+Ext.swift in Sources */,
 				4CEA1D542B84A1BB00B7BDF6 /* SKTEffects.swift in Sources */,
 				4CEA1CCE2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */,
 				4C35F2C82B869200000762C3 /* UserInteractionProtocolDelegate.swift in Sources */,
 				4CEA1CC82B84A01D00B7BDF6 /* ActionLogger.swift in Sources */,
+				4C5742782B907E0D00A5B9D6 /* TupleObservable.swift in Sources */,
 				4CEA1D5E2B84A1BB00B7BDF6 /* SKColor+Extensions.swift in Sources */,
 				4CEA1D622B84A1BB00B7BDF6 /* SKTTimingFunctions.swift in Sources */,
+				4C5742802B9086C100A5B9D6 /* FontData.swift in Sources */,
+				4C5742792B9086A000A5B9D6 /* AssociatedValues.swift in Sources */,
 				4CEA1D5A2B84A1BB00B7BDF6 /* SKNode+Extensions.swift in Sources */,
+				4C5742772B907E0800A5B9D6 /* Protocols.swift in Sources */,
+				4C5742722B907DF000A5B9D6 /* Observable.swift in Sources */,
 				4CD952EB2B8E25EA00109005 /* GameViewController.swift in Sources */,
 				4CEA1D662B84A1BB00B7BDF6 /* SKAction+SpecialEffects.swift in Sources */,
+				4C57428B2B9086F900A5B9D6 /* UIKit+Extras.swift in Sources */,
 				4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */,
+				4C57428A2B9086F200A5B9D6 /* SystemFonts.swift in Sources */,
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
+				4C57426F2B907DDD00A5B9D6 /* Event.swift in Sources */,
 				4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */,
+				4C5742892B9086EE00A5B9D6 /* StylesManager.swift in Sources */,
+				4C5742812B9086C500A5B9D6 /* FontInfoAttribute.swift in Sources */,
+				4C5742712B907DE800A5B9D6 /* EventSubscription.swift in Sources */,
 				4C35F2E02B87E674000762C3 /* AppDelegate.swift in Sources */,
+				4C57427F2B9086BC00A5B9D6 /* FontConvertible.swift in Sources */,
+				4C5742842B9086D400A5B9D6 /* String+Subscript.swift in Sources */,
 				4CEA1D6A2B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D682B84A1BB00B7BDF6 /* SKAction+Extensions.swift in Sources */,
+				4C5742732B907DF400A5B9D6 /* ObservableChainingProxy.swift in Sources */,
 				4CEA1CD22B84A07600B7BDF6 /* SwiftyPlistManager.swift in Sources */,
+				4C57427C2B9086AF00A5B9D6 /* CommonsAttributes.swift in Sources */,
+				4C5742762B907E0300A5B9D6 /* OwningEventReference.swift in Sources */,
+				4C57427E2B9086B700A5B9D6 /* Extensions.swift in Sources */,
+				4C57427B2B9086AB00A5B9D6 /* ColorConvertible.swift in Sources */,
 				4CEA1D602B84A1BB00B7BDF6 /* SKTAudio.swift in Sources */,
+				4C57427D2B9086B300A5B9D6 /* Compatibility.swift in Sources */,
 				4CEA1D562B84A1BB00B7BDF6 /* Vector3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1388,7 +1460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1421,7 +1493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CyberSol macOS/CyberSol macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
