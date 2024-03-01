@@ -11,9 +11,8 @@ import UIKit
 #endif
 
 #if os(OSX)
-import Cocoa
+import AppKit
 #endif
-
 
 let log = ActionLogger.defaultLogger()
 var gameName = "Black Widow weich"
@@ -155,7 +154,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // TODO: muss wieder raus
     var currentActiveGame : SolitaireGame?
     
-    // diese function wird vor dem Laden des ViewControllers aufgerufen
+    
+    // endlich habe ich eine func zum initialisieren gefunden
+    override init() {
+        super.init()
+        // MARK: Start des SwiftyPlistManager
+        allPListNames.append(settingsListName)
+        allPListNames.append(statisticsListName)
+        allPListNames.append(contentsOf: allPListNames)
+        SwiftyPlistManager.shared.start(plistNames: allPListNames, logging: false)
+
+        readSettingList()
+        readStatisticsList()
+
+    }
+    
     func applicationWillFinishLaunching(_ notification: Notification) {
         
     }
@@ -178,3 +191,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 #endif
+
+

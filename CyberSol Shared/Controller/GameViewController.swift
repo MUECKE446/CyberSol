@@ -778,6 +778,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // redo ist gar nicht nötig
         redoButton.isHidden = true
         
+        
+        /*
         // MARK: Start des SwiftyPlistManager
         allPListNames.append(settingsListName)
         allPListNames.append(statisticsListName)
@@ -786,7 +788,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
 
         readSettingList()
         readStatisticsList()
-
+        */
+         
         // die erste Scene einrichten
         // die Scene füllt den gesamten View aus
         let viewFrame = view.frame
