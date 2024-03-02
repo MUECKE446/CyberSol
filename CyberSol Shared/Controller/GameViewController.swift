@@ -682,27 +682,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
 
 class GameViewController: NSViewController, TouchesProtocolDelegate, UserInteractionProtocolDelegate {
     
-    // TODO: muss wieder anders gelöst werden
-    /*
-    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint) {
-        
-    }
-    
-    func setUserInteractionDisabledForDuration(_ duration: TimeInterval, actionId: Int) {
-        
-    }
-    
-    func enableUndoRedo() {
-        
-    }
-    
-    func disableUndoRedo() {
-        
-    }
-    */
-    
-
-    
+   
     struct statics {
         static var cardAndEmptyPileSize = CGSize.zero
         static var timer: Timer? = nil
@@ -778,19 +758,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // redo ist gar nicht nötig
         redoButton.isHidden = true
         
-        
-        /*
-        // MARK: Start des SwiftyPlistManager
-        allPListNames.append(settingsListName)
-        allPListNames.append(statisticsListName)
-        allPListNames.append(contentsOf: allPListNames)
-        SwiftyPlistManager.shared.start(plistNames: allPListNames, logging: false)
-
-        readSettingList()
-        readStatisticsList()
-        */
-         
-        // die erste Scene einrichten
+                // die erste Scene einrichten
         // die Scene füllt den gesamten View aus
         let viewFrame = view.frame
         let sceneSize = CGSize(width: viewFrame.width, height: viewFrame.height)
