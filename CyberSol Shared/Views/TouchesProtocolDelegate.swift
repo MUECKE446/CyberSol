@@ -19,8 +19,6 @@ enum TouchType {
 
 @objc protocol TouchesProtocolDelegate {
     
-    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint)
+    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>)
     
-    @objc optional func moveOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint)
-    @objc optional func startMoveOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint)
 }

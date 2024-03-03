@@ -71,37 +71,36 @@ class GameScene: SKScene {
     #if os(iOS)
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first! as UITouch
-        let location = touch.location(in: self)
-        let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        let _ = locationInScene
-        //log.info("touch on: \(locationInScene)")
+        // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
     }
    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first! as UITouch
-        let location = touch.location(in: self)
-        let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        //log.info("touch on: \(locationInScene)")
         let dict = ["Game":-1]
-        sceneDelegate!.tapOnGameWithDictionary(dict, locationInScene: locationInScene)
+        sceneDelegate!.tapOnGameWithDictionary(dict)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first! as UITouch
-        let location = touch.location(in: self)
-        let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        let _ = locationInScene
-        //log.info("touch on: \(locationInScene)")
+        // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
     }
  
     #endif
     
     #if os(OSX)
 
+    // Mouse-based event handling
+    override func mouseDown(with theEvent: NSEvent) {
+        // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
+    }
+
+    override func mouseUp(with theEvent: NSEvent) {
+        //let location = theEvent.location(in: self)
+        let dict = ["Game":-1]
+        sceneDelegate!.tapOnGameWithDictionary(dict)
+    }
+
+    override  func mouseDragged(with theEvent: NSEvent) {
+        // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
+    }
 
     #endif
     

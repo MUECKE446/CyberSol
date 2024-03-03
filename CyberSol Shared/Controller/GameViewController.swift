@@ -512,7 +512,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
 
     // MARK: TouchesProtocolDelegate
     
-    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint) {
+    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>) {
         var card: Card? = nil
         var pile: Pile? = nil
         //log.debug("tapOnGame")
@@ -1159,7 +1159,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
 
     // MARK: TouchesProtocolDelegate
     
-    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>, locationInScene: CGPoint) {
+    func tapOnGameWithDictionary(_ dict: Dictionary<String, Int>) {
         var card: Card? = nil
         var pile: Pile? = nil
         //log.debug("tapOnGame")

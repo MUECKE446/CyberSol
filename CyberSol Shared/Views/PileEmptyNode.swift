@@ -62,32 +62,20 @@ class PileEmptyNode: SKSpriteNode {
         let touch: AnyObject = touches.first!
         let location = touch.location(in: self)
         let touchNode = atPoint(location)
-        //let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        //log.info("touch on: \(locationInScene)")
         let dict = ["PileEmpty":(touchNode as! PileEmptyNode).pileId]
-        delegate!.tapOnGameWithDictionary(dict, locationInScene: location)
+        delegate!.tapOnGameWithDictionary(dict)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch: AnyObject in touches {
             let location = touch.location(in: self)
             let touchNode = atPoint(location)
-            let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-            //log.info("touch on: \(locationInScene)")
             let dict = ["PileEmpty":(touchNode as! PileEmptyNode).pileId]
-            delegate!.tapOnGameWithDictionary(dict, locationInScene: locationInScene)
+            delegate!.tapOnGameWithDictionary(dict)
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        for touch: AnyObject in touches {
-//            let location = touch.location(in: self)
-//            let touchNode = atPoint(location)
-//            let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-//            //log.info("touch on: \(locationInScene)")
-//            let dict = ["PileEmpty":(touchNode as! PileEmptyNode).pileId]
-//            //TODO: delagation
-//        }
     }
     
     #endif
@@ -95,7 +83,21 @@ class PileEmptyNode: SKSpriteNode {
     // TODO:    Behandlung Mouse für OSX hinzufügen
     
     #if os(OSX)
-    
+
+    // Mouse-based event handling
+    override func mouseDown(with theEvent: NSEvent) {
+    }
+
+    override func mouseUp(with theEvent: NSEvent) {
+        let location = theEvent.location(in: self)
+        let touchNode = atPoint(location)
+        let dict = ["PileEmpty":(touchNode as! PileEmptyNode).pileId]
+        delegate!.tapOnGameWithDictionary(dict)
+    }
+
+    override  func mouseDragged(with theEvent: NSEvent) {
+    }
+
     
     #endif
     

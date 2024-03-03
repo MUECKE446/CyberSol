@@ -271,47 +271,20 @@ class CardNode: SKSpriteNode {
     #if os(iOS)
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first! as UITouch
-        let location = touch.location(in: self)
-        let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        let _ = locationInScene
-        //log.info("CardNode on: \(locationInScene)")
-        lastTouchType = .touchesBegan
+        
+         lastTouchType = .touchesBegan
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch = touches.first! as UITouch
         let location = touch.location(in: self)
         let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        //log.info("CardNode on: \(locationInScene)")
         let dict = ["Card":(touchNode as! CardNode).cardId]
-        touchesProtocolDelegate!.tapOnGameWithDictionary(dict, locationInScene: locationInScene)
+        touchesProtocolDelegate!.tapOnGameWithDictionary(dict)
         lastTouchType = .touchesEnded
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch = touches.first! as UITouch
-        let location = touch.location(in: self)
-        let touchNode = atPoint(location)
-        let locationInScene = touchNode.convert(location, to: touchNode.scene!)
-        let _ = locationInScene
-        //log.info("CardNode on: \(locationInScene)")
-        //let dict = ["Card":(touchNode as! CardNode).cardId]
-//        switch lastTouchType {
-//        case .touchesBegan:
-//            //TODO: delegation
-//            //touchesProtocolDelegate!.startMoveOnGameWithDictionary(dict, locationInScene: locationInScene)
-//            break
-//        case .touchesMoved:
-//            //TODO: delagation
-//            //touchesProtocolDelegate!.startMoveOnGameWithDictionary(dict, locationInScene: locationInScene)
-//            break
-//        default:
-//            // nothing todo
-//            break
-//        }
     }
     
     #endif
@@ -321,7 +294,22 @@ class CardNode: SKSpriteNode {
     
     #if os(OSX)
     
-    
+    // Mouse-based event handling
+    override func mouseDown(with theEvent: NSEvent) {
+        lastTouchType = .touchesBegan
+    }
+
+    override func mouseUp(with theEvent: NSEvent) {
+        let location = theEvent.location(in: self)
+        let touchNode = atPoint(location)
+        let dict = ["Card":(touchNode as! CardNode).cardId]
+        touchesProtocolDelegate!.tapOnGameWithDictionary(dict)
+        lastTouchType = .touchesEnded
+    }
+
+    override  func mouseDragged(with theEvent: NSEvent) {
+    }
+
     #endif
     
 
