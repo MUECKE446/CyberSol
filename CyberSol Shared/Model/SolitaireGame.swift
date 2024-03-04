@@ -1081,6 +1081,7 @@ default:
 
         // Liste der Kartenaktionen löschen
         movements.removeAll(keepingCapacity: false)
+        
     }
     
     // MARK: Kartenaktionen, die nicht in den UndoManager eingespeist werden

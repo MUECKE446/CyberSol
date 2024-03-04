@@ -27,17 +27,9 @@ class GameScene: SKScene {
 
     weak var sceneDelegate: TouchesProtocolDelegate? = nil
     
-    #if os(iOS)
     var cardNodes: [CardNode]? = []
     var pileEmptyNodes: [PileEmptyNode]? = []
-    #endif
     
-    #if os(OSX)
-    var cardNodes: [CardNode]? = []
-    var pileEmptyNodes: [PileEmptyNode]? = []
-    #endif
-
-
     
     deinit {
         log.verbose("GameScene deinit")
@@ -46,7 +38,6 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         //let background = SKSpriteNode(imageNamed: "CyberSol_Background1")
         let background = SKSpriteNode(imageNamed: "BackgroundWildWest")
-//        background.setScale(0.5)
         background.yScale = size.height/background.size.height
         background.xScale = size.width/background.size.width
         background.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -69,7 +60,6 @@ class GameScene: SKScene {
      }
   
     #if os(iOS)
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
     }
@@ -82,11 +72,9 @@ class GameScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
     }
- 
     #endif
     
     #if os(OSX)
-
     // Mouse-based event handling
     override func mouseDown(with theEvent: NSEvent) {
         // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
@@ -101,7 +89,6 @@ class GameScene: SKScene {
     override  func mouseDragged(with theEvent: NSEvent) {
         // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht
     }
-
     #endif
     
  

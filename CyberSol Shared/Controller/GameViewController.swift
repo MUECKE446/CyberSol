@@ -92,11 +92,12 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.undoManager = UndoManager()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.undoManager = UndoManager()
         
         // Notifications einrichten
         let notificationCenter = NotificationCenter.default
@@ -722,23 +723,28 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     
     // überschreiben der (read-only) property undoManager
     // Hilfsvariable
-    var myUndoManager: UndoManager!
+    var myUndoManager: UndoManager? = nil
+
     override var undoManager: UndoManager {
         get {
-            return myUndoManager
+            return myUndoManager!
         }
         set {
             myUndoManager = newValue
         }
     }
-    
-    override func awakeFromNib() {
+
+     override func awakeFromNib() {
         super.awakeFromNib()
-        self.undoManager = UndoManager()
+        // mit dieser Version habe ich 2 unterschiedliche UndoManager! das läuft nicht
+        //self.undoManager = UndoManager()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // so bekomme ich nur einen UndoManger
+        self.undoManager = UndoManager()
         
         // Notifications einrichten
         let notificationCenter = NotificationCenter.default
@@ -1215,9 +1221,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         }
         // verbiete userInteractions
         disableUndoRedo()
-        // TODO: ändern für macOS
-        //view.isUserInteractionEnabled = false
-        
         
         // es läuft definitiv kein Timer; starte Timer
         // merke die Zeit
@@ -1226,11 +1229,11 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         statics.restTime = duration
         // starte den Timer; der Handler muss versuchen die Interactions wieder zu erlauben
         // TODO: ändern für macOS
-        //statics.timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(GameViewController.setUserInteractionEnabled), userInfo: nil, repeats: false)
+        statics.timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(GameViewController.setUserInteractionEnabled), userInfo: nil, repeats: false)
         //log.debug("disabled for \(duration)")
     }
     
-    func setUserInteractionEnabled() {
+    @objc func setUserInteractionEnabled() {
         // der Timer muss abgelaufen sein
         if let timer = statics.timer {
             if timer.isValid {
@@ -1244,15 +1247,12 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // erlaube userInteractions
         enableUndoRedo()
         
-        // TODO: ändern für macOS
-        //view.isUserInteractionEnabled = true
-        
         //log.debug("userInteractions enabled. Zaehler = \(zaehler)")
     }
     
     func enableUndoRedo() {
         if permitUndoRedo {
-            undoButton.isEnabled = undoManager.canUndo
+            undoButton.isEnabled = self.undoManager.canUndo
             redoButton.isEnabled = undoManager.canRedo
             //log.debug("UndoButton isEnabled = \(undoButton.isEnabled)")
         }
@@ -1266,7 +1266,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     
     // MARK: Button Handler
     
-    /*
     @IBAction func Undo(_ sender: NSButton) {
         if permitUndoRedo {
             //log.messageOnly("Undo")
@@ -1288,7 +1287,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
             }
         }
     }
-    */
+
     // MARK: overrides
 
     // TODO: ändern für macOS

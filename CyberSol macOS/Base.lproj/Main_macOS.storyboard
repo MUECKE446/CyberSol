@@ -748,16 +748,22 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="ADV-qU-g1Z"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="Redo:" target="XfG-lQ-9wD" id="Vh4-xW-N7S"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="HkX-ax-QWM" userLabel="Undo">
                                 <rect key="frame" x="937" y="734" width="48" height="34"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-undo-1" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tfP-4X-ldT">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon-undo-1" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="tfP-4X-ldT">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="WIh-e5-rKq"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="Undo:" target="XfG-lQ-9wD" id="jRr-qp-C0z"/>
+                                </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-tf-uFO" userLabel="Game Name Label">
                                 <rect key="frame" x="173" y="735" width="237" height="26"/>
