@@ -10,7 +10,7 @@
         <!--GameSelect View Controller-->
         <scene sceneID="dZf-pe-3wG">
             <objects>
-                <tableViewController id="4S1-Yf-6Ye" userLabel="GameSelect View Controller" customClass="SelectGameTableViewController" customModule="CyberSolitaire" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4S1-Yf-6Ye" userLabel="GameSelect View Controller" customClass="SelectGameTableViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2cD-Uh-oqC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameSelectCell" rowHeight="300" id="ik9-JO-Oej" userLabel="GameSelectCell" customClass="GameSelectCell" customModule="CyberSolitaire" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameSelectCell" rowHeight="300" id="ik9-JO-Oej" userLabel="GameSelectCell" customClass="GameSelectCell" customModule="CyberSol" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="156.5" width="1024" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ik9-JO-Oej" id="C8E-1L-nJ3">
@@ -230,18 +230,13 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uj4-GR-xd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6iB-BB-YHx">
-                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                </button>
             </objects>
             <point key="canvasLocation" x="430.6640625" y="-575"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="jO0-2m-9Yy">
             <objects>
-                <tableViewController id="7lf-2p-1Wr" customClass="SettingsTableViewController" customModule="CyberSolitaire" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7lf-2p-1Wr" customClass="SettingsTableViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="U3W-i3-Xqt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="680"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,7 +399,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="CyberSolitaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
                         <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
@@ -528,7 +523,7 @@
         <!--Statistic Table View Controller-->
         <scene sceneID="Btf-Yc-lhJ">
             <objects>
-                <tableViewController id="u6Z-o9-Bz6" customClass="StatisticTableViewController" customModule="CyberSolitaire" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u6Z-o9-Bz6" customClass="StatisticTableViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oZc-ux-7aa">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,7 +636,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticViewCell" rowHeight="142" id="62x-eW-V7N" customClass="StatisticViewCell" customModule="CyberSolitaire" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="statisticViewCell" rowHeight="142" id="62x-eW-V7N" customClass="StatisticViewCell" customModule="CyberSol" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="205" width="704" height="142"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="62x-eW-V7N" id="94f-av-Xdm">
