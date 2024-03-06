@@ -822,15 +822,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="262" horizontalPageScroll="10" verticalLineScroll="262" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-aL-a7i">
-                                <rect key="frame" x="0.0" y="384" width="988" height="293"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="65" horizontalPageScroll="10" verticalLineScroll="65" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-aL-a7i">
+                                <rect key="frame" x="0.0" y="116" width="988" height="561"/>
                                 <clipView key="contentView" id="E8i-C7-IMQ">
-                                    <rect key="frame" x="1" y="1" width="986" height="291"/>
+                                    <rect key="frame" x="1" y="1" width="986" height="559"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="262" rowSizeStyle="automatic" headerView="x06-eW-MR0" viewBased="YES" id="OjI-te-i6m">
-                                            <rect key="frame" x="0.0" y="0.0" width="986" height="263"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="65" rowSizeStyle="automatic" headerView="x06-eW-MR0" viewBased="YES" id="OjI-te-i6m">
+                                            <rect key="frame" x="0.0" y="0.0" width="986" height="531"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -848,22 +847,30 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="SelectGameCustomCell" id="bAJ-Vd-6uX" customClass="SelectGameCustomCell" customModule="CyberSol" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="0.0" width="969" height="262"/>
+                                                        <tableCellView identifier="SelectGameCustomCell" id="hDS-iz-Rmt" customClass="SelectGameCustomCell" customModule="CyberSol" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="0.0" width="969" height="65"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField identifier="gameNameLabel" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="CKH-fh-I5X" userLabel="Game name Label">
-                                                                    <rect key="frame" x="1" y="183" width="965" height="59"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" identifier="gameNameTextField" title="gameName" drawsBackground="YES" id="NAA-I7-y85">
-                                                                        <font key="font" size="20" name="Arial-Black"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                <textField identifier="SelectGameCustomCell" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-eR-34D">
+                                                                    <rect key="frame" x="3" y="9" width="965" height="47"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="47" id="RGJ-Md-bfw"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" title="SelectGameCustomCell" drawsBackground="YES" id="p4Q-QM-kWG">
+                                                                        <font key="font" metaFont="systemBold" size="20"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="systemCyanColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="Whn-eR-34D" secondAttribute="trailing" constant="1" id="63E-dw-0qt"/>
+                                                                <constraint firstItem="Whn-eR-34D" firstAttribute="leading" secondItem="hDS-iz-Rmt" secondAttribute="leading" constant="3" id="Vcd-H9-Vfa"/>
+                                                                <constraint firstItem="Whn-eR-34D" firstAttribute="centerY" secondItem="hDS-iz-Rmt" secondAttribute="centerY" id="y6C-gI-mSJ"/>
+                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="gameNameLabel" destination="CKH-fh-I5X" id="7qo-Fc-Lvy"/>
+                                                                <outlet property="gameNameLabel" destination="Whn-eR-34D" id="tEb-4c-WEa"/>
+                                                                <outlet property="textField" destination="Whn-eR-34D" id="Mcu-fu-mqf"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -880,12 +887,27 @@
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" wantsLayer="YES" id="x06-eW-MR0">
+                                <tableHeaderView key="headerView" hidden="YES" wantsLayer="YES" id="x06-eW-MR0">
                                     <rect key="frame" x="0.0" y="0.0" width="986" height="28"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHT-Wp-3Aa">
+                                <rect key="frame" x="377" y="704" width="234" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="wähle ein Spiel aus" id="tnP-5K-Gql">
+                                    <font key="font" metaFont="system" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="6dk-aL-a7i" firstAttribute="leading" secondItem="Q6g-K5-9nz" secondAttribute="leading" id="8t5-Z6-dbd"/>
+                            <constraint firstItem="6dk-aL-a7i" firstAttribute="top" secondItem="Q6g-K5-9nz" secondAttribute="top" constant="91" id="PoF-3a-bbK"/>
+                            <constraint firstAttribute="trailing" secondItem="6dk-aL-a7i" secondAttribute="trailing" constant="36" id="RqA-Ea-pVt"/>
+                            <constraint firstAttribute="bottom" secondItem="6dk-aL-a7i" secondAttribute="bottom" constant="116" id="ghs-kF-kcB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="OjI-te-i6m" id="OMd-w4-WKr"/>

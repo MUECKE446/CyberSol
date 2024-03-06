@@ -72,7 +72,9 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         return userCell
     }
     
-    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 60.00
+    }
     
     
 }
