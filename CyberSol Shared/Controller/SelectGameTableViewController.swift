@@ -26,6 +26,9 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
     struct GameWithDescription {
         var gameName : String
         var gameDescription : Dictionary<String,String>
+        var withDescription = false
+        var descriptionButtonText : String = "Beschreibung anzeigen"
+
     }
     
     var gamesWithDescriptionCanBeSelected : [GameWithDescription] = []
@@ -39,17 +42,21 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
             parent = parent?.superview
         }
         let cell = parent as! GameSelectCell
-        _ = self.tableView.indexPath(for: cell)
-
+        let path = self.tableView.indexPath(for: cell)
 
         if sender.titleLabel?.text == "Beschreibung anzeigen" {
-            sender.setTitle("Beschreibung verbergen", for: UIControl.State.normal)
-            cell.withDescription = true
+            //sender.setTitle("Beschreibung verbergen", for: UIControl.State.normal)
+            gamesWithDescriptionCanBeSelected[path!.item].withDescription = true
+            gamesWithDescriptionCanBeSelected[path!.item].descriptionButtonText = "Beschreibung verbergen"
+            //cell.withDescription = true
         }
         else {
-            sender.setTitle("Beschreibung anzeigen", for: UIControl.State.normal)
-            cell.withDescription = false
+            //sender.setTitle("Beschreibung anzeigen", for: UIControl.State.normal)
+            gamesWithDescriptionCanBeSelected[path!.item].withDescription = false
+            gamesWithDescriptionCanBeSelected[path!.item].descriptionButtonText = "Beschreibung anzeigen"
+            //cell.withDescription = false
         }
+        
         self.tableView.reloadData()
 
     }
@@ -159,13 +166,13 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
     }
     
     func fillTableViewCell( _ cell : inout GameSelectCell, indexPath path : IndexPath, withDescription with: Bool) {
-        if with {
-            let gameName = gamesWithDescriptionCanBeSelected[path.row].gameName
-            let disposal = gamesWithDescriptionCanBeSelected[path.row].gameDescription["disposal"]
-            let target = gamesWithDescriptionCanBeSelected[path.row].gameDescription["target"]
-            let howToPlay = gamesWithDescriptionCanBeSelected[path.row].gameDescription["howToPlay"]
+        if gamesWithDescriptionCanBeSelected[path.item].withDescription {
+            let gameName = gamesWithDescriptionCanBeSelected[path.item].gameName
+            let disposal = gamesWithDescriptionCanBeSelected[path.item].gameDescription["disposal"]
+            let target = gamesWithDescriptionCanBeSelected[path.item].gameDescription["target"]
+            let howToPlay = gamesWithDescriptionCanBeSelected[path.item].gameDescription["howToPlay"]
             // Configure the cell...
-            switch gamesWithDescriptionCanBeSelected[path.row].gameDescription["difficulty"] {
+            switch gamesWithDescriptionCanBeSelected[path.item].gameDescription["difficulty"] {
             case "leicht":
                 cell.backgroundColor = UIColor.green
                 
@@ -182,14 +189,16 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
             cell.disposalLabel?.attributedText = disposal?.set(style: styleGroup)
             cell.targetLabel?.attributedText = target?.set(style: styleGroup)
             cell.howToPlayLabel?.attributedText = howToPlay?.set(style: styleGroup)
+            cell.withDescription = gamesWithDescriptionCanBeSelected[path.item].withDescription
+            cell.descriptionButton.setTitle(gamesWithDescriptionCanBeSelected[path.item].descriptionButtonText, for: UIControl.State.normal)
         }
         else {
-            let gameName = gamesWithDescriptionCanBeSelected[path.row].gameName
+            let gameName = gamesWithDescriptionCanBeSelected[path.item].gameName
             let disposal = ""
             let target = ""
             let howToPlay = ""
             // Configure the cell...
-            switch gamesWithDescriptionCanBeSelected[path.row].gameDescription["difficulty"] {
+            switch gamesWithDescriptionCanBeSelected[path.item].gameDescription["difficulty"] {
             case "leicht":
                 cell.backgroundColor = UIColor.green
                 
@@ -206,6 +215,9 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
             cell.disposalLabel?.attributedText = disposal.set(style: styleGroup)
             cell.targetLabel?.attributedText = target.set(style: styleGroup)
             cell.howToPlayLabel?.attributedText = howToPlay.set(style: styleGroup)
+            cell.withDescription = gamesWithDescriptionCanBeSelected[path.item].withDescription
+            cell.descriptionButton.setTitle(gamesWithDescriptionCanBeSelected[path.item].descriptionButtonText, for: UIControl.State.normal)
+
         }
     }
     
