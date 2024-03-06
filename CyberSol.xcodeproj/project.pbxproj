@@ -57,6 +57,9 @@
 		4C5742922B9096AE00A5B9D6 /* PlayMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D052B84A11400B7BDF6 /* PlayMove.swift */; };
 		4C5742932B9096B500A5B9D6 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1D042B84A11400B7BDF6 /* Statistics.swift */; };
 		4C5742942B90E16F00A5B9D6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */; };
+		4C57429D2B97B27200A5B9D6 /* SelectGameCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57429C2B97B27200A5B9D6 /* SelectGameCustomCell.swift */; };
+		4C5742A02B97B7CF00A5B9D6 /* GameSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC02B84A00B00B7BDF6 /* GameSelectCell.swift */; };
+		4C5742A22B97BC7B00A5B9D6 /* SelectGameTableViewController-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5742A12B97BC7B00A5B9D6 /* SelectGameTableViewController-macOS.swift */; };
 		4CD952AB2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AC2B8D3A2F00109005 /* weiteres Vorgehen in Resources */ = {isa = PBXBuildFile; fileRef = 4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */; };
 		4CD952AD2B8D3D4B00109005 /* CardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1E8F2B84A29900B7BDF6 /* CardNode.swift */; };
@@ -71,7 +74,6 @@
 		4CEA1CC32B84A00B00B7BDF6 /* StatisticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CBD2B84A00B00B7BDF6 /* StatisticTableViewController.swift */; };
 		4CEA1CC42B84A00B00B7BDF6 /* StatisticViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CBE2B84A00B00B7BDF6 /* StatisticViewCell.swift */; };
 		4CEA1CC52B84A00B00B7BDF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CBF2B84A00B00B7BDF6 /* GameViewController.swift */; };
-		4CEA1CC62B84A00B00B7BDF6 /* GameSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC02B84A00B00B7BDF6 /* GameSelectCell.swift */; };
 		4CEA1CC72B84A00B00B7BDF6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */; };
 		4CEA1CC82B84A01D00B7BDF6 /* ActionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CB82B849F8000B7BDF6 /* ActionLogger.swift */; };
 		4CEA1CCD2B84A07600B7BDF6 /* GamesPListHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA1CCA2B84A07600B7BDF6 /* GamesPListHelpers.swift */; };
@@ -337,6 +339,8 @@
 /* Begin PBXFileReference section */
 		4C35F2D12B879A14000762C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C35F2DE2B87E674000762C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C57429C2B97B27200A5B9D6 /* SelectGameCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGameCustomCell.swift; path = Views/SelectGameCustomCell.swift; sourceTree = "<group>"; };
+		4C5742A12B97BC7B00A5B9D6 /* SelectGameTableViewController-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SelectGameTableViewController-macOS.swift"; path = "CyberSol Shared/SelectGameTableViewController-macOS.swift"; sourceTree = SOURCE_ROOT; };
 		4CD952AA2B8D3A2F00109005 /* weiteres Vorgehen */ = {isa = PBXFileReference; lastKnownFileType = text; path = "weiteres Vorgehen"; sourceTree = "<group>"; };
 		4CD952EC2B8E8AB300109005 /* CyberSol macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CyberSol macOS.entitlements"; sourceTree = "<group>"; };
 		4CEA1C862B8499CB00B7BDF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -597,10 +601,12 @@
 			children = (
 				4CEA1CC02B84A00B00B7BDF6 /* GameSelectCell.swift */,
 				4CEA1CBF2B84A00B00B7BDF6 /* GameViewController.swift */,
+				4C57429C2B97B27200A5B9D6 /* SelectGameCustomCell.swift */,
 				4CEA1CBC2B84A00B00B7BDF6 /* SelectGameTableViewController.swift */,
 				4CEA1CC12B84A00B00B7BDF6 /* SettingsTableViewController.swift */,
 				4CEA1CBD2B84A00B00B7BDF6 /* StatisticTableViewController.swift */,
 				4CEA1CBE2B84A00B00B7BDF6 /* StatisticViewCell.swift */,
+				4C5742A12B97BC7B00A5B9D6 /* SelectGameTableViewController-macOS.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1135,6 +1141,7 @@
 				4CEA1D082B84A11400B7BDF6 /* SolitaireGame.swift in Sources */,
 				4CEA1CC42B84A00B00B7BDF6 /* StatisticViewCell.swift in Sources */,
 				4CEA1E942B84A29900B7BDF6 /* CardNode.swift in Sources */,
+				4C5742A02B97B7CF00A5B9D6 /* GameSelectCell.swift in Sources */,
 				4CEA1E982B84A29900B7BDF6 /* PileEmptyNode.swift in Sources */,
 				4CEA1E7A2B84A25600B7BDF6 /* FontConvertible.swift in Sources */,
 				4CEA1E702B84A25600B7BDF6 /* FontInfoAttribute.swift in Sources */,
@@ -1171,7 +1178,6 @@
 				4CEA1D1C2B84A14C00B7BDF6 /* OwningEventReference.swift in Sources */,
 				4CEA1E782B84A25600B7BDF6 /* AssociatedValues.swift in Sources */,
 				4CEA1D202B84A14C00B7BDF6 /* ObservableReference.swift in Sources */,
-				4CEA1CC62B84A00B00B7BDF6 /* GameSelectCell.swift in Sources */,
 				4CEA1D692B84A1BB00B7BDF6 /* CGPoint+Extensions.swift in Sources */,
 				4CEA1D572B84A1BB00B7BDF6 /* CGFloat+Extensions.swift in Sources */,
 				4CEA1D242B84A14C00B7BDF6 /* EventSubscription.swift in Sources */,
@@ -1229,6 +1235,8 @@
 				4CD952EB2B8E25EA00109005 /* GameViewController.swift in Sources */,
 				4CEA1D662B84A1BB00B7BDF6 /* SKAction+SpecialEffects.swift in Sources */,
 				4C57428B2B9086F900A5B9D6 /* UIKit+Extras.swift in Sources */,
+				4C57429D2B97B27200A5B9D6 /* SelectGameCustomCell.swift in Sources */,
+				4C5742A22B97BC7B00A5B9D6 /* SelectGameTableViewController-macOS.swift in Sources */,
 				4C35F2C72B8691D4000762C3 /* TouchesProtocolDelegate.swift in Sources */,
 				4C57428A2B9086F200A5B9D6 /* SystemFonts.swift in Sources */,
 				4CEA1CD02B84A07600B7BDF6 /* Helper.swift in Sources */,
