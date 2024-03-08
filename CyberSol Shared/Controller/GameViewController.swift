@@ -317,16 +317,16 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
         self.game!.dealoutStartFormation()
         game!.gameState = .runningState
         
-        log.verbose("ab jetzt kann gespielt werden. userInteraction = \(view.isUserInteractionEnabled) Zaehler = \(zaehler)")
+        log.verbose("ab jetzt kann gespielt werden")
         //logGameStart()
     }
 
     deinit {
-        log.verbose("GameVC deinit")
+        //log.verbose("GameVC deinit")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        log.verbose("ich verschwinde")
+        //log.verbose("ich verschwinde")
         // Statistik verarbeiten
         if game!.isGameWon() {
             game!.gameStatistic.won += 1
@@ -608,7 +608,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
     func disableUndoRedo() {
         undoButton.isEnabled = false
         redoButton.isEnabled = false
-        //log.debug("")
+        //log.debug("UndoButton isEnabled = \(undoButton.isEnabled)")
     }
     
     // MARK: Button Handler
@@ -706,6 +706,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
 
     var zaehler = 0
 
+    var segueSourceViewController : SelectGameTableViewController_macOS? = nil
+    
     @IBOutlet weak var undoButton: NSButton!
     @IBOutlet weak var redoButton: NSButton!
     @IBOutlet weak var chooseAnotherGameButton: NSButton!
@@ -723,7 +725,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     
     // überschreiben der (read-only) property undoManager
     // Hilfsvariable
-    var myUndoManager: UndoManager? = nil
+    var myUndoManager: UndoManager!
 
     override var undoManager: UndoManager {
         get {
@@ -745,10 +747,12 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         
         // so bekomme ich nur einen UndoManger
         self.undoManager = UndoManager()
+
+        let vc = segueSourceViewController
+        vc?.view.window?.orderOut(vc?.view.window)
         
         // Notifications einrichten
         let notificationCenter = NotificationCenter.default
-        // TODO: muss wieder raus
         notificationCenter.addObserver(self, selector: #selector(GameViewController.createNodeForCard(_:)), name: NSNotification.Name(rawValue: cardCreatedNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.createNodeForEmptyPile(_:)), name: NSNotification.Name(rawValue: pileCreatedNotification), object: nil)
         notificationCenter.addObserver(self, selector: #selector(GameViewController.playSound(_:)), name: NSNotification.Name(rawValue: playSoundNotification), object: nil)
@@ -764,7 +768,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // redo ist gar nicht nötig
         redoButton.isHidden = true
         
-                // die erste Scene einrichten
+        
+        // die erste Scene einrichten
         // die Scene füllt den gesamten View aus
         let viewFrame = view.frame
         let sceneSize = CGSize(width: viewFrame.width, height: viewFrame.height)
@@ -966,7 +971,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         game!.gameState = .runningState
         
         // TODO: ändern für macOS
-        log.verbose("ab jetzt kann gespielt werden. Zaehler = \(zaehler)")
+
+        log.verbose("ab jetzt kann gespielt werden")
         
         //logGameStart()
     }
@@ -975,6 +981,17 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         log.verbose("GameVC deinit")
     }
     
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        // TODO: ändern für macOS
+        let window = self.view.window
+        let windowFrame = window?.frame
+        let a = 1
+
+        
+    }
     override func viewWillDisappear() {
         log.verbose("ich verschwinde")
         // Statistik verarbeiten
@@ -1005,6 +1022,11 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         cheatCard = nil
         zPositionCard = nil
         waitForDuration = nil
+        
+        let vc = segueSourceViewController
+        vc?.view.window?.orderBack(vc?.view.window)
+        
+
         
     }
     // TODO: muss wieder raus
@@ -1228,14 +1250,15 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         statics.durationTimer = duration
         statics.restTime = duration
         // starte den Timer; der Handler muss versuchen die Interactions wieder zu erlauben
-        // TODO: ändern für macOS
+        // der timer feuerte nicht -> er muss bei macOS in die run loop
         statics.timer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(GameViewController.setUserInteractionEnabled), userInfo: nil, repeats: false)
+        RunLoop.current.add(statics.timer!, forMode: .common)
         //log.debug("disabled for \(duration)")
     }
     
-    @objc func setUserInteractionEnabled() {
+    @objc func setUserInteractionEnabled(timer:Timer) {
         // der Timer muss abgelaufen sein
-        if let timer = statics.timer {
+        //if let timer = statics.timer {
             if timer.isValid {
                 timer.invalidate()
                 statics.timer = nil
@@ -1243,7 +1266,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
             else {
                 log.error("timer not valid")
             }
-        }
+        //}
         // erlaube userInteractions
         enableUndoRedo()
         
@@ -1261,7 +1284,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     func disableUndoRedo() {
         undoButton.isEnabled = false
         redoButton.isEnabled = false
-        //log.debug("")
+        //log.debug("UndoButton isEnabled = \(undoButton.isEnabled)")
     }
     
     // MARK: Button Handler
@@ -1288,33 +1311,10 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         }
     }
 
-    // MARK: overrides
-
-    // TODO: ändern für macOS
-/*
-    override var shouldAutorotate : Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.landscape
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override var prefersStatusBarHidden : Bool {
-        return true
-    }
-*/
-    
     // MARK: logging activities
 
     func logGameStart() {
         // TODO: muss wieder raus
-        /*
         //log.verbose("\(self.game!.gameName) started")
         //log.messageOnly("Stapel und Karten nach Auslegen")
         for pile in game!.gamePiles! {
@@ -1329,7 +1329,6 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
             }
         }
         //log.messageOnly("Ende: Auslegen")
-        */
     }
 
 }

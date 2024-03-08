@@ -15,7 +15,7 @@ import AppKit
 #endif
 
 let log = ActionLogger.defaultLogger()
-var gameName = "Black Widow weich"
+var gameName = ""
 // !!! Achtung: bei jeder Änderung der Version muss diese händisch auch in LaunchScreen.xib gemacht werden !!!
 let CyberSolitaireVersion = "1.4.0"
 

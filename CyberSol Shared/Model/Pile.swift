@@ -445,7 +445,6 @@ class Pile: NSObject {
         static var gamePile : Pile? = nil
     }
 
-    var undoManager = UndoManager()
     var cardIdsBeforeShuffle: [Int] = []
 
     var faceDownOverlapPercent = defaultFaceDownOverlapPercent
@@ -535,7 +534,7 @@ class Pile: NSObject {
     }
     
     deinit {
-        log.verbose("Pile deinit")
+        //log.verbose("Pile deinit")
     }
     
     // MARK: Aktionen, die in den UndoManager eingespeist werden
@@ -544,7 +543,7 @@ class Pile: NSObject {
         // MARK: sendet die Notification: playSoundNotification
         // mischt den Pile
         // TODO: muss wieder raus
-        //srandom(time(NULL));
+        //srandom(time(NULL))
         srandom(0);
         
         

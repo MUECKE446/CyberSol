@@ -195,7 +195,12 @@ class SolitaireGame: NSObject {
     
     init(gameName: String, playingAreaRect: CGRect, undoManager: UndoManager, userInteractionProtocolDelegate: UserInteractionProtocolDelegate) {
         self.gameName = gameName
+
+        // MARK: Achtung
+        // der UndoManager darf nicht eigene Gruppen erstellen für jeden Durchlauf der run loop
+        // sobald diese Fähigkeit abgeschaltet ist, arbeitet er korrekt (wie bei iOS)
         self.undoManager = undoManager
+        self.undoManager.groupsByEvent = false
         
         
         // hole Statistik
@@ -247,7 +252,7 @@ class SolitaireGame: NSObject {
             pile.pileEmptySize = cardSize
             pile.maxPileHeight = cardBasicHeight
             
-            pile.undoManager = self.undoManager
+            //pile.undoManager = self.undoManager
             gamePiles!.append(pile)
             // unterrichte den Controller, damit der einen View für die leeren Piles (PileEmptyNode) anlegen kann
             NotificationCenter.default.post(name: Notification.Name(rawValue: pileCreatedNotification), object: pile)
@@ -271,6 +276,8 @@ class SolitaireGame: NSObject {
         startPile = createStartPile(gameLayout!.numberOfDecks)
         
         self.playMove = PlayMove(game: self)
+        
+
     }
     
     deinit {
@@ -351,7 +358,7 @@ class SolitaireGame: NSObject {
         pile.pileEmptySize = cardSize
         pile.maxPileHeight = cardBasicHeight
         
-        pile.undoManager = self.undoManager
+        //pile.undoManager = self.undoManager
         
         // erzeuge die Karten
         for i in 1 ... numberOfDecks * 52 {
