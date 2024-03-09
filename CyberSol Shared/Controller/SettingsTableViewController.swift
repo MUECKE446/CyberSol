@@ -54,8 +54,6 @@ class SettingsTableViewController: UITableViewController,UIPopoverControllerDele
     }
     
     @IBAction func settingsDone(_ sender: Any) {
-        writeSettingsList()
-        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -99,6 +97,71 @@ class SettingsTableViewController: UITableViewController,UIPopoverControllerDele
 }
 
 #endif
+
+#if os(OSX)
+class SettingsViewController: NSViewController {
+    
+    @IBOutlet weak var audioOnOffSwitch: NSSwitch!
+    @IBOutlet weak var permitCheatingSwitch: NSSwitch!
+    @IBOutlet weak var permitUndoSwitch: NSSwitch!
+    @IBOutlet weak var allSettingsDone: NSButton!
+
+    @IBAction func audioOnOffSwitch(_ sender: NSSwitch) {
+        playTones = !playTones
+    }
+    
+    @IBAction func permitCheatingSwitch(_ sender: NSSwitch) {
+        permitCheating = !permitCheating
+    }
+    
+    @IBAction func permitUndoSwitch(_ sender: Any) {
+        permitUndoRedo = !permitUndoRedo
+    }
+    
+    @IBAction func allSettingsDone(_ sender: NSButton) {
+        writeSettingsList()
+        dismiss(self)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        readSettingList()
+        
+        if playTones {
+            audioOnOffSwitch.state = NSSwitch.StateValue.on
+        }
+        else {
+            audioOnOffSwitch.state = NSSwitch.StateValue.off
+        }
+        
+        if permitCheating {
+            permitCheatingSwitch.state = NSSwitch.StateValue.on
+        }
+        else {
+            permitCheatingSwitch.state = NSSwitch.StateValue.off
+        }
+
+        if permitUndoRedo {
+            permitUndoSwitch.state = NSSwitch.StateValue.on
+        }
+        else {
+            permitUndoSwitch.state = NSSwitch.StateValue.off
+        }
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+    }
+
+
+    
+}
+
+
+#endif
+
 
 func readSettingList() {
     playTones = SwiftyPlistManager.shared.fetchValue(for: playTonesKey, fromPlistWithName: settingsListName) as! Bool

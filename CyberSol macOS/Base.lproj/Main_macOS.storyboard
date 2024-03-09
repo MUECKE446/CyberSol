@@ -837,11 +837,11 @@
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="65" horizontalPageScroll="10" verticalLineScroll="65" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-aL-a7i">
                                 <rect key="frame" x="30" y="89" width="988" height="378"/>
-                                <clipView key="contentView" id="E8i-C7-IMQ">
+                                <clipView key="contentView" ambiguous="YES" id="E8i-C7-IMQ">
                                     <rect key="frame" x="1" y="1" width="986" height="376"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="65" rowSizeStyle="automatic" headerView="x06-eW-MR0" viewBased="YES" id="OjI-te-i6m">
+                                        <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="65" rowSizeStyle="automatic" headerView="x06-eW-MR0" viewBased="YES" id="OjI-te-i6m">
                                             <rect key="frame" x="0.0" y="0.0" width="986" height="348"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -900,7 +900,7 @@
                                     <constraint firstAttribute="width" constant="988" id="kLu-zE-gdT"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="YvM-Cc-hpu">
-                                    <rect key="frame" x="1" y="544" width="986" height="16"/>
+                                    <rect key="frame" x="1" y="361" width="986" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="9jx-Cg-NbT">
@@ -975,6 +975,17 @@
                                     <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKA-QG-BqS">
+                                <rect key="frame" x="823" y="561" width="151" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Einstellungen" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DBL-DK-eDE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="pfd-68-AHu" kind="popover" identifier="Settings" popoverAnchorView="OKA-QG-BqS" popoverBehavior="t" preferredEdge="maxY" id="SoD-4w-HMv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="AHT-Wp-3Aa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cOo-In-JXn" secondAttribute="trailing" id="3Do-ui-L36"/>
@@ -1009,6 +1020,145 @@
                 <customObject id="8fM-or-01P" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="86" y="1174"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Wc6-Rl-CZr">
+            <objects>
+                <viewController id="pfd-68-AHu" customClass="SettingsViewController" customModule="CyberSol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Tft-zi-hNB">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="414"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box title="Spielhilfen" translatesAutoresizingMaskIntoConstraints="NO" id="Fig-CQ-ooZ">
+                                <rect key="frame" x="27" y="108" width="346" height="121"/>
+                                <view key="contentView" id="5B7-sa-cdf">
+                                    <rect key="frame" x="4" y="5" width="338" height="95"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pnk-Ce-1c4">
+                                            <rect key="frame" x="18" y="59" width="232" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="fop-jS-nKE"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="letzte verdeckte Karte ansehen" id="06G-bd-Cx4">
+                                                <font key="font" metaFont="systemBold" size="15"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-VP-ag8">
+                                            <rect key="frame" x="18" y="24" width="236" height="19"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="letzten Zug rückgängig machen" id="Rps-fF-5sF">
+                                                <font key="font" metaFont="systemBold" size="15"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-we-FFd">
+                                            <rect key="frame" x="279" y="56" width="42" height="25"/>
+                                            <connections>
+                                                <action selector="permitCheatingSwitch:" target="pfd-68-AHu" id="aAF-AW-4sU"/>
+                                            </connections>
+                                        </switch>
+                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="J2w-PM-AXV">
+                                            <rect key="frame" x="279" y="21" width="42" height="25"/>
+                                            <connections>
+                                                <action selector="permitUndoSwitch:" target="pfd-68-AHu" id="dFH-69-pae"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pnk-Ce-1c4" firstAttribute="leading" secondItem="5B7-sa-cdf" secondAttribute="leading" constant="20" symbolic="YES" id="1AW-0W-Jn0"/>
+                                        <constraint firstItem="pnk-Ce-1c4" firstAttribute="centerY" secondItem="WLH-we-FFd" secondAttribute="centerY" id="3t4-Lf-iEo"/>
+                                        <constraint firstItem="WLH-we-FFd" firstAttribute="leading" secondItem="pnk-Ce-1c4" secondAttribute="trailing" constant="33" id="6BF-4c-I8a"/>
+                                        <constraint firstItem="l5k-VP-ag8" firstAttribute="centerY" secondItem="J2w-PM-AXV" secondAttribute="centerY" id="8JG-tW-bMV"/>
+                                        <constraint firstItem="pnk-Ce-1c4" firstAttribute="leading" secondItem="l5k-VP-ag8" secondAttribute="leading" id="ANk-OG-INB"/>
+                                        <constraint firstAttribute="bottom" secondItem="J2w-PM-AXV" secondAttribute="bottom" constant="23" id="EHE-88-EwB"/>
+                                        <constraint firstItem="pnk-Ce-1c4" firstAttribute="top" secondItem="5B7-sa-cdf" secondAttribute="top" constant="17" id="Fy7-XG-9ns"/>
+                                        <constraint firstAttribute="trailing" secondItem="WLH-we-FFd" secondAttribute="trailing" constant="19" id="KIV-yf-bO2"/>
+                                        <constraint firstItem="WLH-we-FFd" firstAttribute="top" secondItem="5B7-sa-cdf" secondAttribute="top" constant="15" id="M1T-cv-ced"/>
+                                        <constraint firstItem="J2w-PM-AXV" firstAttribute="top" secondItem="WLH-we-FFd" secondAttribute="bottom" constant="13" id="Mt1-VT-oof"/>
+                                        <constraint firstItem="WLH-we-FFd" firstAttribute="leading" secondItem="J2w-PM-AXV" secondAttribute="leading" id="Z1a-Fi-pSa"/>
+                                        <constraint firstItem="J2w-PM-AXV" firstAttribute="leading" secondItem="l5k-VP-ag8" secondAttribute="trailing" constant="29" id="ady-MJ-0pe"/>
+                                        <constraint firstItem="l5k-VP-ag8" firstAttribute="top" secondItem="pnk-Ce-1c4" secondAttribute="bottom" constant="16" id="fe5-SC-yRI"/>
+                                    </constraints>
+                                </view>
+                                <font key="titleFont" metaFont="systemLight" size="17"/>
+                            </box>
+                            <box title="Audio" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-oZ-2VO">
+                                <rect key="frame" x="27" y="255" width="346" height="83"/>
+                                <view key="contentView" id="v6C-sw-raE">
+                                    <rect key="frame" x="4" y="5" width="338" height="57"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-TH-tiX">
+                                            <rect key="frame" x="9" y="21" width="83" height="19"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Geräusche" id="p9b-DV-bwi">
+                                                <font key="font" metaFont="systemBold" size="15"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="ugm-T4-VGX">
+                                            <rect key="frame" x="279" y="18" width="42" height="25"/>
+                                            <connections>
+                                                <action selector="audioOnOffSwitch:" target="pfd-68-AHu" id="pXM-2q-UMw"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mwo-TH-tiX" firstAttribute="leading" secondItem="v6C-sw-raE" secondAttribute="leading" constant="11" id="4ic-z5-Pa9"/>
+                                        <constraint firstItem="ugm-T4-VGX" firstAttribute="top" secondItem="v6C-sw-raE" secondAttribute="top" constant="15" id="9hb-sz-XkK"/>
+                                        <constraint firstAttribute="bottom" secondItem="ugm-T4-VGX" secondAttribute="bottom" constant="20" symbolic="YES" id="LFm-aZ-I5x"/>
+                                        <constraint firstAttribute="trailing" secondItem="ugm-T4-VGX" secondAttribute="trailing" constant="19" id="N8n-ER-NWn"/>
+                                        <constraint firstItem="mwo-TH-tiX" firstAttribute="centerY" secondItem="ugm-T4-VGX" secondAttribute="centerY" id="fCZ-XD-yWQ"/>
+                                        <constraint firstItem="mwo-TH-tiX" firstAttribute="top" secondItem="v6C-sw-raE" secondAttribute="top" constant="17" id="x91-JJ-iuY"/>
+                                    </constraints>
+                                </view>
+                                <font key="titleFont" metaFont="systemLight" size="17"/>
+                            </box>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Au-5D-3PK">
+                                <rect key="frame" x="119" y="359" width="163" height="29"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Einstellungen" id="3yX-DD-yhi">
+                                    <font key="font" metaFont="systemBold" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kpD-tK-IqY">
+                                <rect key="frame" x="158" y="34" width="85" height="32"/>
+                                <buttonCell key="cell" type="push" title="Fertig" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WJj-d3-gNT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="allSettingsDone:" target="pfd-68-AHu" id="vCF-oR-zdh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ufy-oZ-2VO" secondAttribute="trailing" constant="30" id="38n-Yx-OGJ"/>
+                            <constraint firstItem="Fig-CQ-ooZ" firstAttribute="top" secondItem="ufy-oZ-2VO" secondAttribute="bottom" constant="30" id="NT3-26-gkY"/>
+                            <constraint firstItem="ufy-oZ-2VO" firstAttribute="top" secondItem="8Au-5D-3PK" secondAttribute="bottom" constant="21" id="S9D-rp-1Xj"/>
+                            <constraint firstAttribute="trailing" secondItem="Fig-CQ-ooZ" secondAttribute="trailing" constant="30" id="V7N-0p-A5f"/>
+                            <constraint firstItem="kpD-tK-IqY" firstAttribute="top" secondItem="Fig-CQ-ooZ" secondAttribute="bottom" constant="51" id="Yih-Ek-hzB"/>
+                            <constraint firstItem="Fig-CQ-ooZ" firstAttribute="leading" secondItem="Tft-zi-hNB" secondAttribute="leading" constant="30" id="ckJ-uF-D5A"/>
+                            <constraint firstItem="8Au-5D-3PK" firstAttribute="centerX" secondItem="ufy-oZ-2VO" secondAttribute="centerX" id="hsD-ke-hPh"/>
+                            <constraint firstItem="8Au-5D-3PK" firstAttribute="top" secondItem="Tft-zi-hNB" secondAttribute="top" constant="26" id="hvO-no-JVY"/>
+                            <constraint firstItem="Fig-CQ-ooZ" firstAttribute="centerX" secondItem="kpD-tK-IqY" secondAttribute="centerX" id="tUd-8o-ngr"/>
+                            <constraint firstItem="ufy-oZ-2VO" firstAttribute="leading" secondItem="Tft-zi-hNB" secondAttribute="leading" constant="30" id="y6R-Pe-WWs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="allSettingsDone" destination="kpD-tK-IqY" id="mL8-Wh-dyS"/>
+                        <outlet property="audioOnOffSwitch" destination="ugm-T4-VGX" id="FtT-q0-TdP"/>
+                        <outlet property="permitCheatingSwitch" destination="WLH-we-FFd" id="CQf-yH-0Tx"/>
+                        <outlet property="permitUndoSwitch" destination="J2w-PM-AXV" id="jam-6k-zAE"/>
+                    </connections>
+                </viewController>
+                <customObject id="cgr-fb-VE7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="1859"/>
         </scene>
     </scenes>
     <resources>

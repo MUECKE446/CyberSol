@@ -124,14 +124,14 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         
         
         // TODO: muss wieder raus
-//        if segue.identifier == "Settings" {
-//            let destinationVC = segue.destination as! SettingsTableViewController
-//            
+        if segue.identifier == "Settings" {
+            let destinationVC = segue.destinationController as! SettingsViewController
+            
 //            if let settingsPopoverPresentationController = destinationVC.popoverPresentationController {
 //                settingsPopoverPresentationController.delegate = self as UIPopoverPresentationControllerDelegate?
 //            }
-//            
-//        }
+            
+        }
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
