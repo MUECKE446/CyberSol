@@ -59,6 +59,10 @@ class GameScene: SKScene {
          /* Called before each frame is rendered */
      }
   
+    override func didChangeSize(_ oldSize: CGSize) {
+        log.info("")
+    }
+    
     #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Aktionen, die nicht auf einer Card oder PileEmpty ausgeführt werden, interesieren nicht

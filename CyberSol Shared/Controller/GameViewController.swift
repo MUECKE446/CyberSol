@@ -693,6 +693,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         static var listOfActions = [Int]()
     }
     
+//    var startHeight: CGFloat = 0.0
+
     var scene: GameScene? = nil
     var scaleFactorForView: CGFloat = 1.0
     
@@ -714,6 +716,10 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     @IBOutlet weak var gameNameLabel: NSTextField!
     @IBOutlet weak var ScoreValueLabel: NSTextField!
     @IBOutlet weak var playableAreaView: NSView!
+    
+    @IBOutlet weak var greaterButton: NSButton!
+    @IBOutlet weak var lowerButton: NSButton!
+    
     
     @IBAction func ChooseAnotherGameButton(_ sender: Any) {
         log.verbose("GameVC dismiss")
@@ -786,7 +792,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         // Achtung: bei SpriteKit ist der Koordinatenursprung in der linken unteren Ecke
         scene = GameScene(size:sceneSize)
         scene?.sceneDelegate = self
-
+        
         // nachdem die zu bespielende Fläche festgelegt wurde, kann ein Spiel ausgewählt werden
         game = SolitaireGame(gameName: gameName, playingAreaRect: playableRect, undoManager: self.undoManager, userInteractionProtocolDelegate: self)
         
@@ -1243,7 +1249,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         }
         // verbiete userInteractions
         disableUndoRedo()
-        
+
         // es läuft definitiv kein Timer; starte Timer
         // merke die Zeit
         statics.lastStarted = Date.timeIntervalSinceReferenceDate
@@ -1331,6 +1337,80 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         //log.messageOnly("Ende: Auslegen")
     }
 
+    // MARK: resize trials
+    
+    var windowFrames : [NSRect] = [NSRect]()
+    let maxFrames = 5
+    
+    @IBAction func setSizeGreaterButton(_ sender: NSButton) {
+        // vergrößere Höhe jeweils um 10%
+        let currentFrame = self.view.frame
+        var newFrame = currentFrame
+        var windowFrame = self.view.window!.frame
+        
+        if windowFrames.count >= maxFrames {
+            // größer nicht erlaubt ist nicht erlaubt
+            return
+        }
+        
+        log.setup(logLevel: .allLevels, showLogLevel: true, showFileName: false, showLineNumber: false, writeToFile: nil)
+
+        // vergrößern füllt die Liste
+        newFrame.size.height += 0.1 * currentFrame.size.height
+        newFrame.size.width = newFrame.size.height * 1.4
+        let deltaHeight = newFrame.size.height - windowFrame.size.height
+        windowFrame.origin = windowFrame.origin.offset(dx: 0.0, dy: -deltaHeight)
+        windowFrame.size = newFrame.size
+        windowFrames.append(windowFrame)
+        
+        self.view.window?.setFrame(windowFrame, display: true)
+  
+        // bearbeite die Möglichkeiten die Spielgröße zu verändern
+        setStateOfGraeterLowerButton()
+        
+
+        log.info("windowFrames.count \(windowFrames.count)")
+        log.setup()
+    }
+    
+    @IBAction func setSizeLowerButton(_ sender: NSButton) {
+        // verkleinere Höhe jeweils um 10%
+        var windowFrame = self.view.window!.frame
+        
+        if windowFrames.count == 1 {
+            // kleiner ist nicht erlaubt
+            return
+        }
+
+        log.setup(logLevel: .allLevels, showLogLevel: true, showFileName: false, showLineNumber: false, writeToFile: nil)
+        
+        // verkleinern reduziert die Liste
+        // lösche den letzten Frame
+        windowFrames.remove(at: windowFrames.endIndex-1)
+        let lastFrame = windowFrames[windowFrames.endIndex-1]
+        windowFrame = lastFrame
+
+        self.view.window?.setFrame(windowFrame, display: true)
+
+        // bearbeite die Möglichkeiten die Spielgröße zu verändern
+        setStateOfGraeterLowerButton()
+        
+        log.info("windowFrames.count \(windowFrames.count)")
+        log.setup()
+    }
+    
+    override func viewDidAppear() {
+        // jetzt kann die Grösse des Spiels vom Anwender nicht mehr mit der Maus verändert werden
+        self.view.window?.styleMask.remove(.resizable)
+        windowFrames.append(self.view.window!.frame)
+        setStateOfGraeterLowerButton()
+    }
+    
+    func setStateOfGraeterLowerButton() {
+        greaterButton.isEnabled = windowFrames.count < maxFrames
+        lowerButton.isEnabled = windowFrames.count > 1
+    }
+    
 }
 
 #endif
