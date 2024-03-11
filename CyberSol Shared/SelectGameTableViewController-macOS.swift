@@ -115,8 +115,8 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         if segue.identifier == "PlayGame" {
             // gameName wurde bei der Selection in der Tabelle gesetzt
 
-            let frame = self.view.window?.frame
-            let topLeft = self.view.frame.origin
+            _ = self.view.window?.frame
+            _ = self.view.frame.origin
 
             (segue.destinationController as! GameViewController).segueSourceViewController = (segue.sourceController as! SelectGameTableViewController_macOS)
             
@@ -125,7 +125,7 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         
         // TODO: muss wieder raus
         if segue.identifier == "Settings" {
-            let destinationVC = segue.destinationController as! SettingsViewController
+            _ = segue.destinationController as! SettingsViewController
             
 //            if let settingsPopoverPresentationController = destinationVC.popoverPresentationController {
 //                settingsPopoverPresentationController.delegate = self as UIPopoverPresentationControllerDelegate?

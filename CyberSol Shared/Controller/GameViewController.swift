@@ -991,13 +991,8 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        // TODO: ändern für macOS
-        let window = self.view.window
-        let windowFrame = window?.frame
-        let a = 1
-
-        
     }
+    
     override func viewWillDisappear() {
         log.verbose("ich verschwinde")
         // Statistik verarbeiten
