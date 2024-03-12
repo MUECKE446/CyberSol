@@ -1251,14 +1251,14 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-we-FFd">
-                                            <rect key="frame" x="279" y="56" width="42" height="25"/>
+                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-we-FFd">
+                                            <rect key="frame" x="279" y="55" width="42" height="26"/>
                                             <connections>
                                                 <action selector="permitCheatingSwitch:" target="pfd-68-AHu" id="aAF-AW-4sU"/>
                                             </connections>
                                         </switch>
-                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="J2w-PM-AXV">
-                                            <rect key="frame" x="279" y="21" width="42" height="25"/>
+                                        <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="J2w-PM-AXV">
+                                            <rect key="frame" x="279" y="21" width="42" height="24"/>
                                             <connections>
                                                 <action selector="permitUndoSwitch:" target="pfd-68-AHu" id="dFH-69-pae"/>
                                             </connections>
@@ -1288,8 +1288,8 @@
                                     <rect key="frame" x="4" y="5" width="338" height="57"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-TH-tiX">
-                                            <rect key="frame" x="9" y="21" width="83" height="19"/>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mwo-TH-tiX">
+                                            <rect key="frame" x="9" y="22" width="83" height="18"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Geräusche" id="p9b-DV-bwi">
                                                 <font key="font" metaFont="systemBold" size="15"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1307,6 +1307,7 @@
                                         <constraint firstItem="mwo-TH-tiX" firstAttribute="leading" secondItem="v6C-sw-raE" secondAttribute="leading" constant="11" id="4ic-z5-Pa9"/>
                                         <constraint firstItem="ugm-T4-VGX" firstAttribute="top" secondItem="v6C-sw-raE" secondAttribute="top" constant="15" id="9hb-sz-XkK"/>
                                         <constraint firstAttribute="bottom" secondItem="ugm-T4-VGX" secondAttribute="bottom" constant="20" symbolic="YES" id="LFm-aZ-I5x"/>
+                                        <constraint firstItem="ugm-T4-VGX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mwo-TH-tiX" secondAttribute="trailing" constant="8" symbolic="YES" id="MK2-L8-wwb"/>
                                         <constraint firstAttribute="trailing" secondItem="ugm-T4-VGX" secondAttribute="trailing" constant="19" id="N8n-ER-NWn"/>
                                         <constraint firstItem="mwo-TH-tiX" firstAttribute="centerY" secondItem="ugm-T4-VGX" secondAttribute="centerY" id="fCZ-XD-yWQ"/>
                                         <constraint firstItem="mwo-TH-tiX" firstAttribute="top" secondItem="v6C-sw-raE" secondAttribute="top" constant="17" id="x91-JJ-iuY"/>
