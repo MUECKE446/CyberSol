@@ -29,7 +29,7 @@ class StatisticViewCell: UITableViewCell {
 
 import AppKit
 
-class StatisticCellView: NSTableCellView {
+class StatisticViewCell: NSTableCellView {
     
     @IBOutlet weak var gameNameLabel: NSTextField!
     

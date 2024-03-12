@@ -318,6 +318,11 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
         (totalGames,totalWon,totalTime) = computeStatisticTotals()
         totalLost = totalGames - totalWon
         
+        totalGamesAll.stringValue = String(totalGames)
+        totalGamesAllWon.stringValue = String(totalWon)
+        totalGamesAllLost.stringValue = String(totalLost)
+        totalTimeAll.stringValue = totalTime.formattedString()
+        
 //        totalGamesLabel.text = String(totalGames)
 //        totalWonLabel.text = String(totalWon)
 //        totalLostLabel.text = String(totalLost)
@@ -331,6 +336,15 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
     }
     
     // MARK: - Table view data source
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        gamesStatistics.count
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        let gameName = gamesStatistics[row]
+        return gameName
+    }
     
     /*
      // Override to support conditional editing of the table view.
