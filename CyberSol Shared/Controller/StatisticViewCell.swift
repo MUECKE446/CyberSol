@@ -47,3 +47,5 @@ class StatisticViewCell: NSTableCellView {
 }
 
 #endif
+
+

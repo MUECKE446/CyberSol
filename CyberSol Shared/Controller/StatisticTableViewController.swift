@@ -224,14 +224,15 @@ extension TimeInterval {
 
 
 
-class StatisticViewController: NSViewController, NSTableViewDataSource {
+class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     
     @IBOutlet weak var totalGamesAll: NSTextField!
     @IBOutlet weak var totalGamesAllWon: NSTextField!
     @IBOutlet weak var totalGamesAllLost: NSTextField!
     @IBOutlet weak var totalTimeAll: NSTextField!
 
-
+    @IBOutlet weak var tableView: NSTableView!
+    
 
     var totalGames = 0
     var totalWon = 0
@@ -305,15 +306,6 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        deleteStatisticsButton.backgroundColor = UIColor.white
-//        deleteStatisticsButton.layer.cornerRadius = 5
-//        deleteStatisticsButton.layer.borderWidth = 1
-//        deleteStatisticsButton.layer.borderColor = UIColor.black.cgColor
-//        
-//        goBackButton.backgroundColor = UIColor.white
-//        goBackButton.layer.cornerRadius = 5
-//        goBackButton.layer.borderWidth = 1
-//        goBackButton.layer.borderColor = UIColor.black.cgColor
         
         (totalGames,totalWon,totalTime) = computeStatisticTotals()
         totalLost = totalGames - totalWon
@@ -323,10 +315,12 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
         totalGamesAllLost.stringValue = String(totalLost)
         totalTimeAll.stringValue = totalTime.formattedString()
         
-//        totalGamesLabel.text = String(totalGames)
-//        totalWonLabel.text = String(totalWon)
-//        totalLostLabel.text = String(totalLost)
-//        totaltimeLabel.text = totalTime.formattedString()
+        // MARK: Achtung die Zeitberechnung stimmt nicht (auch nicht bei iOS)
+        
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -341,10 +335,18 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
         gamesStatistics.count
     }
     
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        let gameName = gamesStatistics[row]
-        return gameName
-    }
+//    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+//        var statisticCell : StatisticViewCell = StatisticViewCell()
+//        let gameName = gamesStatistics[row].gameName
+//        
+//        
+//        statisticCell.gameNameLabel!.stringValue = gameName
+// 
+//        return statisticCell
+//        
+//        
+//        return gameName
+//    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -391,8 +393,100 @@ class StatisticViewController: NSViewController, NSTableViewDataSource {
      }
      */
     
-}
-    #endif
+    // MARK: Delegate
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+
+        let gameStatistic = gamesStatistics[row]
+        
+        if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "gameNameColumn") {
+            
+            let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "gameNameColumn")
+            guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+            cellView.textField?.stringValue = gameStatistic.gameName
+            return cellView
+            
+        }  else
+        if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "gamesTotalColumn") {
+            
+            let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "gamesTotalColumn")
+            guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+            cellView.textField?.integerValue = gameStatistic.totalPlayed
+            return cellView
+            
+        }  else
+        if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "gamesWonColumn") {
+            
+            let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "gamesWonColumn")
+            guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+            cellView.textField?.integerValue = gameStatistic.won
+            return cellView
+            
+        }  else
+        if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "gamesLostColumn") {
+            
+            let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "gamesLostColumn")
+            guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+            cellView.textField?.integerValue = gameStatistic.lost
+            return cellView
+            
+        } else {
+            if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "totalTimeColumn") {
+                
+                let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "totalTimeColumn")
+                guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+                cellView.textField?.stringValue = gameStatistic.totalTime.formattedString()
+                return cellView
+                
+            }
+        }
+                    
+         return nil
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+            return 30.0
+    }
     
 
+}
+    #endif
+/*
+let currentPurchase = viewModel.purchases[row]
+
+if viewModel.displayMode == .plain {
+    if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "idColumn") {
+        
+        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "idCell")
+        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+        cellView.textField?.integerValue = currentPurchase.id ?? 0
+        return cellView
+        
+    } else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "userInfoColumn") {
+        
+        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "userInfoCell")
+        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
+        cellView.textField?.stringValue = currentPurchase.userInfo?.username ?? ""
+        
+        if let avatarData = viewModel.getAvatarData(forUserWithID: currentPurchase.userInfo?.id) {
+            cellView.imageView?.image = NSImage(data: avatarData)
+        }
+        
+        return cellView
+        
+    } else {
+        
+        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "paymentInfoCell")
+        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? PaymentInfoCellView else { return nil }
+        cellView.textField?.stringValue = currentPurchase.paymentInfo?.creditCard ?? ""
+        cellView.creditCardTypeLabel?.stringValue = currentPurchase.paymentInfo?.creditCardType ?? ""
+        cellView.amountLabel?.stringValue = currentPurchase.paymentInfo?.amount ?? ""
+        
+        cellView.purchasesPopup?.removeAllItems()
+        cellView.purchasesPopup?.addItems(withTitles: currentPurchase.paymentInfo?.purchaseTypes ?? [])
+        
+        return cellView
+        
+    }
+*/
 
