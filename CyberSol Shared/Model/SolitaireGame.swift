@@ -577,6 +577,9 @@ class SolitaireGame: NSObject {
         if timeSinceLastTimeCumulated <= kMaxLastTimeCumulated {
             totalTimeGame += timeSinceLastTimeCumulated
         }
+        else {
+            totalTimeGame += kMaxLastTimeCumulated
+        }
         //log.verbose("totalGameTime ist: \(totalTimeGame)")
         // dann beginnt das ganze Spiel von Neuem
         lastTimeCumulated = now

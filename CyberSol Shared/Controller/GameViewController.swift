@@ -335,7 +335,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
             game!.cumulatePlayTime()
             game!.gameStatistic.lost += 1
         }
-        game!.gameStatistic.totalTime = game!.totalTimeGame
+        game!.gameStatistic.totalTime += game!.totalTimeGame
         game!.gameStatistic.totalPlayed += 1                 // wieder ein Spiel mehr
 
         updateStatisticsListFor(game!.gameName, with: game!.gameStatistic)
@@ -1003,7 +1003,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
             game!.cumulatePlayTime()
             game!.gameStatistic.lost += 1
         }
-        game!.gameStatistic.totalTime = game!.totalTimeGame
+        game!.gameStatistic.totalTime += game!.totalTimeGame
         game!.gameStatistic.totalPlayed += 1                 // wieder ein Spiel mehr
         
         updateStatisticsListFor(game!.gameName, with: game!.gameStatistic)
