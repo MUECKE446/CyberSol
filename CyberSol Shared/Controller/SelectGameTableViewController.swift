@@ -32,6 +32,8 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
     }
     
     var gamesWithDescriptionCanBeSelected : [GameWithDescription] = []
+    var allGameNames: [String] = []                                         // alle gameNamen in derselben Ordnung wie sie in de table view angezeigt werden
+    
     
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var statisticButton: UIButton!
@@ -131,6 +133,13 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
         //        }
         
         
+        
+        // allGameNames beinhaltet jetzt alle Namen in der Reihenfolge der table view
+        for value in gamesWithDescriptionCanBeSelected {
+            let gameDescription = value
+            let gameName = gameDescription.gameName
+            allGameNames.append(gameName)
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -242,13 +251,22 @@ class SelectGameTableViewController: UITableViewController,UIPopoverPresentation
             if let settingsPopoverPresentationController = destinationVC.popoverPresentationController {
                 settingsPopoverPresentationController.delegate = self as UIPopoverPresentationControllerDelegate?
             }
-            
+        }
+        
+        if segue.identifier == "Statistics" {
+            //log.info("")
+            (segue.destination as! StatisticTableViewController).reArrangedAllGameNames = allGameNames
         }
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
         if sender is UIButton {
-            performSegue(withIdentifier: "Settings", sender: sender)
+            if (sender as! UIButton).titleLabel?.text == "Einstellungen" {
+                performSegue(withIdentifier: "Settings", sender: sender)
+            }
+            if (sender as! UIButton).titleLabel?.text == "Statistik" {
+                performSegue(withIdentifier: "Statistics", sender: sender)
+            }
         }
         else {
             performSegue(withIdentifier: "PlayGame", sender: sender)

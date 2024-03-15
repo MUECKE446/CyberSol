@@ -16,6 +16,8 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
     }
     
     var gamesWithDescriptionCanBeSelected : [GameWithDescription] = []
+    var allGameNames: [String] = []                                         // alle gameNamen in derselben Ordnung wie sie in de table view angezeigt werden
+    
 
     @IBOutlet weak var tableView: NSTableView!
     
@@ -42,7 +44,15 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+ 
+        // allGameNames beinhaltet jetzt alle Namen in der Reihenfolge der table view
+        for value in gamesWithDescriptionCanBeSelected {
+            let gameDescription = value
+            let gameName = gameDescription.gameName
+            allGameNames.append(gameName)
+        }
         
+
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -132,11 +142,22 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
 //            }
             
         }
+        
+        if segue.identifier == "Statistics" {
+            //log.info("")
+            (segue.destinationController as! StatisticViewController).reArrangedAllGameNames = allGameNames
+        }
+
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
         if sender is NSButton {
-            performSegue(withIdentifier: "Settings", sender: sender)
+            if (sender as! NSButton).title == "Einstellungen" {
+                performSegue(withIdentifier: "Settings", sender: sender)
+            }
+            if (sender as! NSButton).title == "Statistik" {
+                performSegue(withIdentifier: "Statistics", sender: sender)
+            }
         }
         else {
             performSegue(withIdentifier: "PlayGame", sender: sender)

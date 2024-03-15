@@ -25,6 +25,7 @@ let gamesKey = "games"
 
 internal var gamesInStatisticsList = SwiftyPlistManager.shared.fetchValue(for: gamesKey, fromPlistWithName: statisticsListName) as! [Dictionary<String,Any>]
 
+// sobald der StatisticTableViewController aufgerufen wird, wird dieses Feld neu geordnet (Reihenfolge der Spiele wie bei der Spieleauswahl)
 var gamesStatistics : [GameStatistic] = []
 
 func computeStatisticTotals() -> (totalPlayed : Int, totalWon : Int, totalTime : TimeInterval) {

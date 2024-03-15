@@ -70,7 +70,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
     
     
     @IBAction func ChooseAnotherGameButton(_ sender: Any) {
-        log.verbose("GameVC dismiss")
+        //log.verbose("GameVC dismiss")
         self.dismiss(animated: true) {
             self.view = nil
             self.scene = nil
@@ -722,7 +722,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     
     
     @IBAction func ChooseAnotherGameButton(_ sender: Any) {
-        log.verbose("GameVC dismiss")
+        //log.verbose("GameVC dismiss")
         self.dismiss(self)
         self.view.layer = nil
         self.scene = nil
@@ -994,7 +994,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
     }
     
     override func viewWillDisappear() {
-        log.verbose("ich verschwinde")
+        //log.verbose("ich verschwinde")
         // Statistik verarbeiten
         if game!.isGameWon() {
             game!.gameStatistic.won += 1
@@ -1364,7 +1364,7 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         setStateOfGraeterLowerButton()
         
 
-        log.info("windowFrames.count \(windowFrames.count)")
+        //log.info("windowFrames.count \(windowFrames.count)")
         log.setup()
     }
     

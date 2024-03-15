@@ -38,6 +38,8 @@ class StatisticTableViewController: UITableViewController {
     var totalLost = 0
     var totalTime : TimeInterval = 0.0
     
+    var reArrangedAllGameNames : [String] = []
+    
     @IBOutlet weak var deleteThisStatisticButton: UIButton!
     
     @IBAction func goBackButton(_ sender: Any) {
@@ -111,6 +113,9 @@ class StatisticTableViewController: UITableViewController {
         goBackButton.layer.cornerRadius = 5
         goBackButton.layer.borderWidth = 1
         goBackButton.layer.borderColor = UIColor.black.cgColor
+        
+        // Neuordnung der Statistiken wie bei der Spieleauswahl
+        reArrangeGameStatistics(reArrangedAllGameNames)
         
         (totalGames,totalWon,totalTime) = computeStatisticTotals()
         totalLost = totalGames - totalWon
@@ -239,6 +244,7 @@ class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableV
     var totalLost = 0
     var totalTime : TimeInterval = 0.0
     
+    var reArrangedAllGameNames : [String] = []
     
     @IBAction func goBackButton(_ sender: Any) {
         self.dismiss() {
@@ -306,6 +312,9 @@ class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        // Neuordnung der Statistiken wie bei der Spieleauswahl
+        reArrangeGameStatistics(reArrangedAllGameNames)
         
         (totalGames,totalWon,totalTime) = computeStatisticTotals()
         totalLost = totalGames - totalWon
@@ -450,43 +459,23 @@ class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableV
     
 
 }
-    #endif
-/*
-let currentPurchase = viewModel.purchases[row]
+#endif
 
-if viewModel.displayMode == .plain {
-    if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "idColumn") {
-        
-        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "idCell")
-        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
-        cellView.textField?.integerValue = currentPurchase.id ?? 0
-        return cellView
-        
-    } else if tableColumn?.identifier == NSUserInterfaceItemIdentifier(rawValue: "userInfoColumn") {
-        
-        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "userInfoCell")
-        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? NSTableCellView else { return nil }
-        cellView.textField?.stringValue = currentPurchase.userInfo?.username ?? ""
-        
-        if let avatarData = viewModel.getAvatarData(forUserWithID: currentPurchase.userInfo?.id) {
-            cellView.imageView?.image = NSImage(data: avatarData)
+
+
+// ersetzt das alte gamesStatistic durch das neu geordnete
+func reArrangeGameStatistics(_ forGameNames: [String]) {
+    var newGamesStatistics : [GameStatistic] = []
+    
+        for forGameName in forGameNames {
+                for gameStatistic in gamesStatistics {
+                    if forGameName == gameStatistic.gameName {
+                        newGamesStatistics.append(gameStatistic)
+            }
         }
-        
-        return cellView
-        
-    } else {
-        
-        let cellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "paymentInfoCell")
-        guard let cellView = tableView.makeView(withIdentifier: cellIdentifier, owner: self) as? PaymentInfoCellView else { return nil }
-        cellView.textField?.stringValue = currentPurchase.paymentInfo?.creditCard ?? ""
-        cellView.creditCardTypeLabel?.stringValue = currentPurchase.paymentInfo?.creditCardType ?? ""
-        cellView.amountLabel?.stringValue = currentPurchase.paymentInfo?.amount ?? ""
-        
-        cellView.purchasesPopup?.removeAllItems()
-        cellView.purchasesPopup?.addItems(withTitles: currentPurchase.paymentInfo?.purchaseTypes ?? [])
-        
-        return cellView
-        
     }
-*/
+    gamesStatistics = newGamesStatistics
+}
+
+
 

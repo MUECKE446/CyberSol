@@ -1106,7 +1106,7 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.70967741935483875" horizontal="YES" id="fip-Vh-6jx">
+                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="fip-Vh-6jx">
                                     <rect key="frame" x="1" y="420" width="705" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -1408,7 +1408,7 @@
                                     <font key="font" metaFont="systemBold"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="VfY-2x-Swz" kind="popover" popoverAnchorView="jSM-Dz-xl4" popoverBehavior="t" preferredEdge="maxY" id="laU-XI-Hse"/>
+                                    <segue destination="VfY-2x-Swz" kind="popover" identifier="Statistics" popoverAnchorView="jSM-Dz-xl4" popoverBehavior="t" preferredEdge="maxY" id="laU-XI-Hse"/>
                                 </connections>
                             </button>
                         </subviews>
