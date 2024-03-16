@@ -45,6 +45,7 @@ class StatisticTableViewController: UITableViewController {
     @IBAction func goBackButton(_ sender: Any) {
         self.dismiss(animated: true) {
             //self.view = nil
+            writeStatisticsList()
         }
     }
     
@@ -249,66 +250,98 @@ class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableV
     @IBAction func goBackButton(_ sender: Any) {
         self.dismiss() {
             //self.view = nil
-        }
-    }
-    
-    @IBAction func deleteThisStatisticButtonTapped(_ sender: Any) {
-        /*
-        var parent = (sender as! UIButton).superview
-        while ((parent != nil) && !(parent!.isKind(of: StatisticViewCell.self))) {
-            parent = parent?.superview
-        }
-        let cell = parent as! StatisticViewCell
-        let indexPath = self.tableView.indexPath(for: cell)
-        
-        let alert = UIAlertController(title: "Bitte bestätigen", message: "möchtest Du diese Statistik wirklich löschen?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { action in
-            var gameStatistic = gamesStatistics[(indexPath?.row)!]
-            gameStatistic.totalPlayed = 0
-            gameStatistic.won = 0
-            gameStatistic.lost = 0
-            gameStatistic.totalTime = 0.0
-            gamesStatistics[(indexPath?.row)!] = gameStatistic
-            (self.totalGames,self.totalWon,self.totalTime) = computeStatisticTotals()
-            self.totalLost = self.totalGames - self.totalWon
-            self.totalGamesLabel.text = String(self.totalGames)
-            self.totalWonLabel.text = String(self.totalWon)
-            self.totalLostLabel.text = String(self.totalLost)
-            self.totaltimeLabel.text = self.totalTime.formattedString()
-            
-            self.tableView.reloadData()
             writeStatisticsList()
-        }))
-        alert.addAction(UIAlertAction(title: "Abbbruch", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-         */
+        }
     }
     
-    @IBAction func deleteAllStatistics(_ sender: Any) {
-        /*
-        let alert = UIAlertController(title: "Bitte bestätigen", message: "möchtest Du alle Statistiken wirklich löschen?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { action in
-            for (index, var gameStatistic) in gamesStatistics.enumerated() {
+    func showAlert( text: String, question: String, completion: @escaping (_ result: Bool)->()) {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = NSAlert.Style.warning
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Abbruch")
+        alert.beginSheetModal(for: self.view.window!, completionHandler: { result in completion(result == NSApplication.ModalResponse.alertFirstButtonReturn)})
+    }
+    
+    @IBAction func deleteThisStatisticButtonTapped(_ sender: NSButton) {
+
+//        // vielleicht brauch man's mal
+//        // den Button welcher Table View Cell wurde gedrückt
+//        // der view des Buttons
+//        let view = sender.cell?.controlView
+//        // die Reihe in der Tabelle 4. Reihe (3)
+//        let row = self.tableView.row(for: view!)
+//        // der view der ganzen Reihe
+//        let columnView = self.tableView.tableColumn(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "gameNameColumn"))!
+//        // der index für die cell gameNameColumn (1. Spalte) (0)
+//        let index = self.tableView.tableColumns.firstIndex(of: columnView)
+//        // die Spalte der cell, in der der Button sich befindet (4)
+//        let c =  self.tableView.column(for: view!)
+//        // der cell view der cell gameNameColumn
+//        let cellView = self.tableView.view(atColumn: 0, row: row, makeIfNecessary: false) as! NSTableCellView
+//        // das Text field mit entsprechendem Text (Napoleos Square)
+//        let t = cellView.textField!.stringValue
+          
+        showAlert(text: "Bitte bestätigen", question: "möchtest Du diese Statistik wirklich löschen?") { result in
+            if result {
+                //log.info("einzelne Statistik löschen")
+ 
+                // den Button welcher Table View Cell wurde gedrückt
+                let view = sender.cell?.controlView
+                let row = self.tableView.row(for: view!)
+
+                var gameStatistic = gamesStatistics[row]
                 gameStatistic.totalPlayed = 0
                 gameStatistic.won = 0
                 gameStatistic.lost = 0
                 gameStatistic.totalTime = 0.0
-                gamesStatistics[index] = gameStatistic
-            }
-            (self.totalGames,self.totalWon,self.totalTime) = computeStatisticTotals()
-            self.totalLost = self.totalGames - self.totalWon
-            self.totalGamesLabel.text = String(self.totalGames)
-            self.totalWonLabel.text = String(self.totalWon)
-            self.totalLostLabel.text = String(self.totalLost)
-            self.totaltimeLabel.text = self.totalTime.formattedString()
-            self.tableView.reloadData()
-            writeStatisticsList()
-        }))
-        alert.addAction(UIAlertAction(title: "Abbbruch", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-         */
+                gamesStatistics[row] = gameStatistic
+                
+                // die Werte für alle Spiele neu berechnen
+                (self.totalGames,self.totalWon,self.totalTime) = computeStatisticTotals()
+                self.totalLost = self.totalGames - self.totalWon
+                // Werte im Tabellen Head neu setzen
+                self.totalGamesAll.stringValue = String(self.totalGames)
+                self.totalGamesAllWon.stringValue = String(self.totalWon)
+                self.totalGamesAllLost.stringValue = String(self.totalLost)
+                self.totalTimeAll.stringValue = self.totalTime.formattedString()
+                
+                self.tableView.reloadData()
+                writeStatisticsList()
+             }
+        }
     }
     
+    
+    @IBAction func deleteAllStatistics(_ sender: Any) {
+        
+        showAlert(text: "Bitte bestätigen", question: "möchtest Du alle Statistiken wirklich löschen?") { result in
+            if result {
+                //log.info("gesamte Statistik löschen")
+                
+                for (index, var gameStatistic) in gamesStatistics.enumerated() {
+                    gameStatistic.totalPlayed = 0
+                    gameStatistic.won = 0
+                    gameStatistic.lost = 0
+                    gameStatistic.totalTime = 0.0
+                    gamesStatistics[index] = gameStatistic
+                }
+                
+                // die Werte für alle Spiele neu berechnen
+                (self.totalGames,self.totalWon,self.totalTime) = computeStatisticTotals()
+                self.totalLost = self.totalGames - self.totalWon
+                // Werte im Tabellen Head neu setzen
+                self.totalGamesAll.stringValue = String(self.totalGames)
+                self.totalGamesAllWon.stringValue = String(self.totalWon)
+                self.totalGamesAllLost.stringValue = String(self.totalLost)
+                self.totalTimeAll.stringValue = self.totalTime.formattedString()
+                
+                self.tableView.reloadData()
+                writeStatisticsList()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -323,9 +356,6 @@ class StatisticViewController: NSViewController, NSTableViewDataSource, NSTableV
         totalGamesAllWon.stringValue = String(totalWon)
         totalGamesAllLost.stringValue = String(totalLost)
         totalTimeAll.stringValue = totalTime.formattedString()
-        
-        // MARK: Achtung die Zeitberechnung stimmt nicht (auch nicht bei iOS)
-        
         
         tableView.delegate = self
         tableView.dataSource = self

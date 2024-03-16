@@ -32,7 +32,7 @@ class GameScene: SKScene {
     
     
     deinit {
-        log.verbose("GameScene deinit")
+        //log.verbose("GameScene deinit")
     }
     
     override func didMove(to view: SKView) {

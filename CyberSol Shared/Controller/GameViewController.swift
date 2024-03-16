@@ -317,7 +317,7 @@ class GameViewController: UIViewController, TouchesProtocolDelegate, UserInterac
         self.game!.dealoutStartFormation()
         game!.gameState = .runningState
         
-        log.verbose("ab jetzt kann gespielt werden")
+        //log.verbose("ab jetzt kann gespielt werden")
         //logGameStart()
     }
 
@@ -978,13 +978,13 @@ class GameViewController: NSViewController, TouchesProtocolDelegate, UserInterac
         
         // TODO: ändern für macOS
 
-        log.verbose("ab jetzt kann gespielt werden")
+        //log.verbose("ab jetzt kann gespielt werden")
         
         //logGameStart()
     }
 
     deinit {
-        log.verbose("GameVC deinit")
+        //log.verbose("GameVC deinit")
     }
     
     

@@ -56,6 +56,8 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        
     }
 
     
@@ -106,11 +108,11 @@ class SelectGameTableViewController_macOS: NSViewController, NSTableViewDelegate
         let table = notification.object as! NSTableView
         if table.selectedRow != -1 {
             gameName = gamesWithDescriptionCanBeSelected[table.selectedRow].gameName
-            print("gameName: \(gameName)")
+            //print("gameName: \(gameName)")
             table.deselectRow(table.selectedRow)
         }
         else {
-            print("no game selected")
+            //print("no game selected")
         }
 
     }
